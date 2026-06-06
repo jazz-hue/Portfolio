@@ -1,0 +1,815 @@
+{
+  "profile": {
+    "name_cn": "王玮",
+    "name_en": "Wang Wei",
+    "title_cn": "平面设计师 / 视觉传达",
+    "title_en": "Graphic Designer & AI Artist",
+    "school": "兰州城市学院 视觉传达设计专业",
+    "intro_cn": "您好，我是王玮，一名专注于平面设计的设计师。熟练掌握 Photoshop、Illustrator 等设计软件，熟悉运用各种 AI 工具：MJ、ComfyUI、Nano Banana、Runway，具备扎实的创意设计和品牌视觉表达能力。热爱标志设计、摄影与探索新鲜事物，相信设计可以为生活注入无限可能。",
+    "intro_en": "Hi, I'm Wang Wei — a graphic designer focused on visual communication. Proficient in Photoshop, Illustrator and AI tools (Midjourney, ComfyUI, Nano Banana, Runway). I bring solid creative direction and brand visual skills, with a love for logos, photography, and discovery.",
+    "email": "wean1234580@gmail.com",
+    "wechat": "15609344927",
+    "qq": "2298833893",
+    "phone": "15609344927",
+    "location_cn": "深圳，中国",
+    "location_en": "Shenzhen, China",
+    "avatar": "images/about/avatar.webp"
+  },
+  "video": {
+    "placeholder": "images/about/video-cover.webp",
+    "src": ""
+  },
+  "sections": [
+    {
+      "slug": "posters",
+      "title_cn": "海报设计",
+      "title_en": "Poster Design",
+      "kind": "main",
+      "items": [
+        {
+          "thumb": "images/posters/thumb/001.webp",
+          "full": "images/posters/full/001.webp",
+          "src_name": "Image 326.png"
+        },
+        {
+          "thumb": "images/posters/thumb/002.webp",
+          "full": "images/posters/full/002.webp",
+          "src_name": "Image 328.png"
+        },
+        {
+          "thumb": "images/posters/thumb/003.webp",
+          "full": "images/posters/full/003.webp",
+          "src_name": "Image 330.png"
+        },
+        {
+          "thumb": "images/posters/thumb/004.webp",
+          "full": "images/posters/full/004.webp",
+          "src_name": "Image 331.png"
+        },
+        {
+          "thumb": "images/posters/thumb/005.webp",
+          "full": "images/posters/full/005.webp",
+          "src_name": "Image 336.png"
+        },
+        {
+          "thumb": "images/posters/thumb/006.webp",
+          "full": "images/posters/full/006.webp",
+          "src_name": "Image 338.png"
+        },
+        {
+          "thumb": "images/posters/thumb/007.webp",
+          "full": "images/posters/full/007.webp",
+          "src_name": "Image 340.png"
+        },
+        {
+          "thumb": "images/posters/thumb/008.webp",
+          "full": "images/posters/full/008.webp",
+          "src_name": "Image 341.png"
+        },
+        {
+          "thumb": "images/posters/thumb/009.webp",
+          "full": "images/posters/full/009.webp",
+          "src_name": "Image 349.png"
+        },
+        {
+          "thumb": "images/posters/thumb/010.webp",
+          "full": "images/posters/full/010.webp",
+          "src_name": "Image 351.png"
+        },
+        {
+          "thumb": "images/posters/thumb/011.webp",
+          "full": "images/posters/full/011.webp",
+          "src_name": "Image 352.png"
+        },
+        {
+          "thumb": "images/posters/thumb/012.webp",
+          "full": "images/posters/full/012.webp",
+          "src_name": "Image 354.png"
+        },
+        {
+          "thumb": "images/posters/thumb/013.webp",
+          "full": "images/posters/full/013.webp",
+          "src_name": "Image 356.png"
+        },
+        {
+          "thumb": "images/posters/thumb/014.webp",
+          "full": "images/posters/full/014.webp",
+          "src_name": "Image 357.png"
+        },
+        {
+          "thumb": "images/posters/thumb/015.webp",
+          "full": "images/posters/full/015.webp",
+          "src_name": "Image 360.png"
+        },
+        {
+          "thumb": "images/posters/thumb/016.webp",
+          "full": "images/posters/full/016.webp",
+          "src_name": "Image 363.png"
+        },
+        {
+          "thumb": "images/posters/thumb/017.webp",
+          "full": "images/posters/full/017.webp",
+          "src_name": "fluxxin2.jpg"
+        },
+        {
+          "thumb": "images/posters/thumb/018.webp",
+          "full": "images/posters/full/018.webp",
+          "src_name": "shijuebannerxin2shouiiban.jpg"
+        },
+        {
+          "thumb": "images/posters/thumb/019.webp",
+          "full": "images/posters/full/019.webp",
+          "src_name": "shujuebannerxin2shoujib.jpg"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "slug": "aplus",
+      "title_cn": "A+设计",
+      "title_en": "A+ Design",
+      "kind": "main",
+      "items": [
+        {
+          "thumb": "images/aplus/thumb/001.webp",
+          "full": "images/aplus/full/001.webp",
+          "src_name": "1.jpg"
+        },
+        {
+          "thumb": "images/aplus/thumb/002.webp",
+          "full": "images/aplus/full/002.webp",
+          "src_name": "2.jpg"
+        },
+        {
+          "thumb": "images/aplus/thumb/003.webp",
+          "full": "images/aplus/full/003.webp",
+          "src_name": "3.jpg"
+        },
+        {
+          "thumb": "images/aplus/thumb/004.webp",
+          "full": "images/aplus/full/004.webp",
+          "src_name": "4.jpg"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "slug": "products",
+      "title_cn": "主图设计",
+      "title_en": "Product Design",
+      "kind": "main",
+      "items": [
+        {
+          "thumb": "images/products/thumb/001.webp",
+          "full": "images/products/full/001.webp",
+          "src_name": "087619269d79e6f9eb5dadc1715322e5.jpg"
+        },
+        {
+          "thumb": "images/products/thumb/002.webp",
+          "full": "images/products/full/002.webp",
+          "src_name": "44b133809b805e6a842e3dc4f37e9fd9.jpg"
+        },
+        {
+          "thumb": "images/products/thumb/003.webp",
+          "full": "images/products/full/003.webp",
+          "src_name": "8b2e18aa3a2f3d133e87eca487a425c4.jpg"
+        },
+        {
+          "thumb": "images/products/thumb/004.webp",
+          "full": "images/products/full/004.webp",
+          "src_name": "Image 285.png"
+        },
+        {
+          "thumb": "images/products/thumb/005.webp",
+          "full": "images/products/full/005.webp",
+          "src_name": "Image 287.png"
+        },
+        {
+          "thumb": "images/products/thumb/006.webp",
+          "full": "images/products/full/006.webp",
+          "src_name": "Image 289.png"
+        },
+        {
+          "thumb": "images/products/thumb/007.webp",
+          "full": "images/products/full/007.webp",
+          "src_name": "Image 291.png"
+        },
+        {
+          "thumb": "images/products/thumb/008.webp",
+          "full": "images/products/full/008.webp",
+          "src_name": "Image 293.png"
+        },
+        {
+          "thumb": "images/products/thumb/009.webp",
+          "full": "images/products/full/009.webp",
+          "src_name": "Image 296.png"
+        },
+        {
+          "thumb": "images/products/thumb/010.webp",
+          "full": "images/products/full/010.webp",
+          "src_name": "Image 298.png"
+        },
+        {
+          "thumb": "images/products/thumb/011.webp",
+          "full": "images/products/full/011.webp",
+          "src_name": "Image 299.png"
+        },
+        {
+          "thumb": "images/products/thumb/012.webp",
+          "full": "images/products/full/012.webp",
+          "src_name": "a25474020ef4aabd25ba65739a23b47b.jpg"
+        },
+        {
+          "thumb": "images/products/thumb/013.webp",
+          "full": "images/products/full/013.webp",
+          "src_name": "dc9c1752557387db19f6206d8c885e81.jpg"
+        },
+        {
+          "thumb": "images/products/thumb/014.webp",
+          "full": "images/products/full/014.webp",
+          "src_name": "e253d58596921db7888394204199f635.jpg"
+        },
+        {
+          "thumb": "images/products/thumb/015.webp",
+          "full": "images/products/full/015.webp",
+          "src_name": "资源 25.png"
+        },
+        {
+          "thumb": "images/products/thumb/016.webp",
+          "full": "images/products/full/016.webp",
+          "src_name": "资源 26.png"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "slug": "h5",
+      "title_cn": "H5 设计",
+      "title_en": "H5 Design",
+      "kind": "main",
+      "items": [
+        {
+          "thumb": "images/h5/thumb/001.webp",
+          "full": "images/h5/full/001.webp",
+          "src_name": "CLUQ9571.jpg"
+        },
+        {
+          "thumb": "images/h5/thumb/002.webp",
+          "full": "images/h5/full/002.webp",
+          "src_name": "DLEK9639.jpg"
+        },
+        {
+          "thumb": "images/h5/thumb/003.webp",
+          "full": "images/h5/full/003.webp",
+          "src_name": "DUMS3760.jpg"
+        },
+        {
+          "thumb": "images/h5/thumb/004.webp",
+          "full": "images/h5/full/004.webp",
+          "src_name": "HZYB6740.jpg"
+        },
+        {
+          "thumb": "images/h5/thumb/005.webp",
+          "full": "images/h5/full/005.webp",
+          "src_name": "TLXP2764.jpg"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "slug": "banners",
+      "title_cn": "Banner 设计",
+      "title_en": "Banner Design",
+      "kind": "main",
+      "items": [
+        {
+          "thumb": "images/banners/thumb/001.webp",
+          "full": "images/banners/full/001.webp",
+          "src_name": "GZZJ0177.jpg"
+        },
+        {
+          "thumb": "images/banners/thumb/002.webp",
+          "full": "images/banners/full/002.webp",
+          "src_name": "Image 424.png"
+        },
+        {
+          "thumb": "images/banners/thumb/003.webp",
+          "full": "images/banners/full/003.webp",
+          "src_name": "Image 425.png"
+        },
+        {
+          "thumb": "images/banners/thumb/004.webp",
+          "full": "images/banners/full/004.webp",
+          "src_name": "Image 426.png"
+        },
+        {
+          "thumb": "images/banners/thumb/005.webp",
+          "full": "images/banners/full/005.webp",
+          "src_name": "Image 428.png"
+        },
+        {
+          "thumb": "images/banners/thumb/006.webp",
+          "full": "images/banners/full/006.webp",
+          "src_name": "Image 429.png"
+        },
+        {
+          "thumb": "images/banners/thumb/007.webp",
+          "full": "images/banners/full/007.webp",
+          "src_name": "Image 430.png"
+        },
+        {
+          "thumb": "images/banners/thumb/008.webp",
+          "full": "images/banners/full/008.webp",
+          "src_name": "Image 431.png"
+        },
+        {
+          "thumb": "images/banners/thumb/009.webp",
+          "full": "images/banners/full/009.webp",
+          "src_name": "Image 432.png"
+        },
+        {
+          "thumb": "images/banners/thumb/010.webp",
+          "full": "images/banners/full/010.webp",
+          "src_name": "Image 433.png"
+        },
+        {
+          "thumb": "images/banners/thumb/011.webp",
+          "full": "images/banners/full/011.webp",
+          "src_name": "Image 434.png"
+        },
+        {
+          "thumb": "images/banners/thumb/012.webp",
+          "full": "images/banners/full/012.webp",
+          "src_name": "Image 435.png"
+        },
+        {
+          "thumb": "images/banners/thumb/013.webp",
+          "full": "images/banners/full/013.webp",
+          "src_name": "Image 436.png"
+        },
+        {
+          "thumb": "images/banners/thumb/014.webp",
+          "full": "images/banners/full/014.webp",
+          "src_name": "Image 437.png"
+        },
+        {
+          "thumb": "images/banners/thumb/015.webp",
+          "full": "images/banners/full/015.webp",
+          "src_name": "Image 439.png"
+        },
+        {
+          "thumb": "images/banners/thumb/016.webp",
+          "full": "images/banners/full/016.webp",
+          "src_name": "Image 440.png"
+        },
+        {
+          "thumb": "images/banners/thumb/017.webp",
+          "full": "images/banners/full/017.webp",
+          "src_name": "MYIC4948.jpg"
+        },
+        {
+          "thumb": "images/banners/thumb/018.webp",
+          "full": "images/banners/full/018.webp",
+          "src_name": "NSMO4255.jpg"
+        },
+        {
+          "thumb": "images/banners/thumb/019.webp",
+          "full": "images/banners/full/019.webp",
+          "src_name": "XXMB3577.jpg"
+        },
+        {
+          "thumb": "images/banners/thumb/020.webp",
+          "full": "images/banners/full/020.webp",
+          "src_name": "鞋子.jpg"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "slug": "webdesign",
+      "title_cn": "网页设计",
+      "title_en": "Web Design",
+      "kind": "main",
+      "items": [
+        {
+          "thumb": "images/webdesign/thumb/001.webp",
+          "full": "images/webdesign/full/001.webp",
+          "src_name": "POLLYFAB Website UI.png"
+        },
+        {
+          "thumb": "images/webdesign/thumb/002.webp",
+          "full": "images/webdesign/full/002.webp",
+          "src_name": "screenshot-1779313458739.png"
+        },
+        {
+          "thumb": "images/webdesign/thumb/003.webp",
+          "full": "images/webdesign/full/003.webp",
+          "src_name": "screenshot-1779317851315.png"
+        },
+        {
+          "thumb": "images/webdesign/thumb/004.webp",
+          "full": "images/webdesign/full/004.webp",
+          "src_name": "screenshot-1779318056922.png"
+        },
+        {
+          "thumb": "images/webdesign/thumb/005.webp",
+          "full": "images/webdesign/full/005.webp",
+          "src_name": "screenshot-2026-05-20T22-02-22.png"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "slug": "illustration",
+      "title_cn": "插画设计",
+      "title_en": "Illustration",
+      "kind": "main",
+      "items": [
+        {
+          "thumb": "images/illustration/thumb/001.webp",
+          "full": "images/illustration/full/001.webp",
+          "src_name": "3.1.png"
+        },
+        {
+          "thumb": "images/illustration/thumb/002.webp",
+          "full": "images/illustration/full/002.webp",
+          "src_name": "5.1.png"
+        },
+        {
+          "thumb": "images/illustration/thumb/003.webp",
+          "full": "images/illustration/full/003.webp",
+          "src_name": "8.1.png"
+        },
+        {
+          "thumb": "images/illustration/thumb/004.webp",
+          "full": "images/illustration/full/004.webp",
+          "src_name": "Image 234.png"
+        },
+        {
+          "thumb": "images/illustration/thumb/005.webp",
+          "full": "images/illustration/full/005.webp",
+          "src_name": "Image 249.jpg"
+        },
+        {
+          "thumb": "images/illustration/thumb/006.webp",
+          "full": "images/illustration/full/006.webp",
+          "src_name": "Image 259.png"
+        },
+        {
+          "thumb": "images/illustration/thumb/007.webp",
+          "full": "images/illustration/full/007.webp",
+          "src_name": "Image 267.png"
+        },
+        {
+          "thumb": "images/illustration/thumb/008.webp",
+          "full": "images/illustration/full/008.webp",
+          "src_name": "Jinx.jpg"
+        },
+        {
+          "thumb": "images/illustration/thumb/009.webp",
+          "full": "images/illustration/full/009.webp",
+          "src_name": "lpatterson_League_of_Legends_style_big_perspective_strong_story_aa70e124-1822-4f10-9b8a-8f0dd0de9d08.png"
+        },
+        {
+          "thumb": "images/illustration/thumb/010.webp",
+          "full": "images/illustration/full/010.webp",
+          "src_name": "莫甘娜.jpg"
+        }
+      ],
+      "groups": []
+    },
+    {
+      "slug": "ai",
+      "title_cn": "AI 设计",
+      "title_en": "AI Design",
+      "kind": "ai",
+      "items": [],
+      "groups": [
+        {
+          "slug": "portraits",
+          "title_cn": "人像",
+          "title_en": "Portraits",
+          "items": [
+            {
+              "thumb": "images/ai/portraits/thumb/001.webp",
+              "full": "images/ai/portraits/full/001.webp",
+              "src_name": "jazzk4636_A_model_wearing_black_pointed_shoes_a_brown_knitted_s_0faf3132-cd2e-43d5-a2bd-e36080e3ad50.png"
+            },
+            {
+              "thumb": "images/ai/portraits/thumb/002.webp",
+              "full": "images/ai/portraits/full/002.webp",
+              "src_name": "jazzk4636_A_photograph_of_an_elegant_woman_with_sleek_straight__cd3f920c-6fec-48e5-ad1e-a92ceae93db2.png"
+            },
+            {
+              "thumb": "images/ai/portraits/thumb/003.webp",
+              "full": "images/ai/portraits/full/003.webp",
+              "src_name": "jazzk4636_A_portrait_of_an_androgynous_woman_with_pink_eye_shad_78d8c984-8ced-439c-bbec-3bf0f5520764.png"
+            },
+            {
+              "thumb": "images/ai/portraits/thumb/004.webp",
+              "full": "images/ai/portraits/full/004.webp",
+              "src_name": "jazzk4636_Black_and_white_portrait_of_an_elegant_woman_with_blo_40e3fd8a-eee3-4169-905f-bfa37984c8be.png"
+            },
+            {
+              "thumb": "images/ai/portraits/thumb/005.webp",
+              "full": "images/ai/portraits/full/005.webp",
+              "src_name": "jazzk4636_Close-up_portrait_of_a_model_with_curly_hair_wearing__176d8a00-f80c-4629-93ba-0446e7aa1ee6.png"
+            },
+            {
+              "thumb": "images/ai/portraits/thumb/006.webp",
+              "full": "images/ai/portraits/full/006.webp",
+              "src_name": "jazzk4636_Low-angle_shot_Asian_girl_with_messy_braid_back_top_l_647e1652-e596-4ceb-b804-a3c401e69f73.png"
+            },
+            {
+              "thumb": "images/ai/portraits/thumb/007.webp",
+              "full": "images/ai/portraits/full/007.webp",
+              "src_name": "jazzk4636_Worms-eye_view_child_blowing_rainbow_soap_bubbles_in__ee2e909b-e8b0-45eb-b58c-6c803328968d.png"
+            }
+          ]
+        },
+        {
+          "slug": "personal",
+          "title_cn": "个人风格",
+          "title_en": "Personal Style",
+          "items": [
+            {
+              "thumb": "images/ai/personal/thumb/001.webp",
+              "full": "images/ai/personal/full/001.webp",
+              "src_name": "jazzk4636_A_medieval_knight_running_at_full_speed_with_a_lanc_981f7600-b006-490d-a990-8d919cde703e_0.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/002.webp",
+              "full": "images/ai/personal/full/002.webp",
+              "src_name": "jazzk4636_Extreme_low-angle_upward_shot_35mm_standard_lens_co_58251163-299c-4686-b3cb-02931631a23e_3.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/003.webp",
+              "full": "images/ai/personal/full/003.webp",
+              "src_name": "jazzk4636_Knight_in_gothic_plate_armor_blocking_with_shield_pix_0dbd220b-16a8-4a85-b1b6-afccc824bd1e.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/004.webp",
+              "full": "images/ai/personal/full/004.webp",
+              "src_name": "jazzk4636_The_dismounted_knight_kneels_in_his_bloodstained_ta_8df6c9fe-38da-495a-9286-0c18c8eac5b9_3.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/005.webp",
+              "full": "images/ai/personal/full/005.webp",
+              "src_name": "jazzk4636_This_is_a_highly_detailed_and_dramatic_portrait_of_Gu_0ea955de-d99f-4617-884b-420d20f61908.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/006.webp",
+              "full": "images/ai/personal/full/006.webp",
+              "src_name": "jazzk4636_combustion_sword_cleaving_chromatic_aberration_voids__268fb76b-0598-4371-ad09-5831b1b7a0ab.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/007.webp",
+              "full": "images/ai/personal/full/007.webp",
+              "src_name": "jazzk4636_fractured_cubist_swordsman_slicing_through_prismatic__94b44042-9a65-4c19-ab4b-1d60fbcedc64.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/008.webp",
+              "full": "images/ai/personal/full/008.webp",
+              "src_name": "jazzk4636_kinetic_figure_breaking_titanium_chains_shattered_r_aaf73f85-d2f1-4007-aa0d-0282ad27b0b7_0.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/009.webp",
+              "full": "images/ai/personal/full/009.webp",
+              "src_name": "jazzk4636_low_lunge_thrust_with_parallel_blades_strike_path_war_8a6f31b1-cf3c-4323-9c4e-6fdafe71dff8.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/010.webp",
+              "full": "images/ai/personal/full/010.webp",
+              "src_name": "jazzk4636_mercury_human_figure_melting_into_ocean_vortex_liquid_560e5f63-de40-48e7-84d5-c224d92d8b6b.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/011.webp",
+              "full": "images/ai/personal/full/011.webp",
+              "src_name": "jazzk4636_quantum_wings_piercing_through_binary_code_prison_hol_8024464c-7e97-43e7-a359-8defe1bcf18c.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/012.webp",
+              "full": "images/ai/personal/full/012.webp",
+              "src_name": "jazzk4636_self-reflection_in_broken_mirror1.5_1950s_Chicago_s_c1dd19f7-70f5-4b87-92a1-b00248aa4d02_1.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/013.webp",
+              "full": "images/ai/personal/full/013.webp",
+              "src_name": "jazzk4636_spinning_blades_entangling_observer_effect_sword_trai_22025913-0cdc-439a-933b-c70de74dca63.png"
+            },
+            {
+              "thumb": "images/ai/personal/thumb/014.webp",
+              "full": "images/ai/personal/full/014.webp",
+              "src_name": "jazzk4636_spinning_blades_entangling_observer_effect_sword_trai_41da0531-cc29-4003-ba30-73e409d5718a.png"
+            }
+          ]
+        },
+        {
+          "slug": "ai-product",
+          "title_cn": "AI 产品",
+          "title_en": "AI Product",
+          "items": [
+            {
+              "thumb": "images/ai/ai-product/thumb/001.webp",
+              "full": "images/ai/ai-product/full/001.webp",
+              "src_name": "jazzk4636_A_highly_realistic_product_photo_showcases_a_futurist_601343d3-ae9a-4745-9ee5-c35d70358824.png"
+            },
+            {
+              "thumb": "images/ai/ai-product/thumb/002.webp",
+              "full": "images/ai/ai-product/full/002.webp",
+              "src_name": "jazzk4636_A_hyper-realistic_product_render_of_a_3D-printed_avan_9713904a-f28a-4be9-a1a9-88aab216025f.png"
+            },
+            {
+              "thumb": "images/ai/ai-product/thumb/003.webp",
+              "full": "images/ai/ai-product/full/003.webp",
+              "src_name": "jazzk4636_A_pair_of_highly_conceptual_3D-printed_luxury_sneaker_83607335-ebf9-49f6-a6e3-09c6ca6dcb61.png"
+            },
+            {
+              "thumb": "images/ai/ai-product/thumb/004.webp",
+              "full": "images/ai/ai-product/full/004.webp",
+              "src_name": "jazzk4636_A_visually_striking_avant-garde_product_photograph_fe_a8ffb45a-5d45-4518-911f-188b3a455a79.png"
+            },
+            {
+              "thumb": "images/ai/ai-product/thumb/005.webp",
+              "full": "images/ai/ai-product/full/005.webp",
+              "src_name": "jazzk4636_Hyper-realistic_product_render_of_the_Scoria_Ember_sn_eafda3fd-0af5-4ef8-b41f-780770befdde.png"
+            }
+          ]
+        },
+        {
+          "slug": "greek-gods",
+          "title_cn": "古希腊诸神",
+          "title_en": "Greek Gods",
+          "items": [
+            {
+              "thumb": "images/ai/greek-gods/thumb/001.webp",
+              "full": "images/ai/greek-gods/full/001.webp",
+              "src_name": "资源 44.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/002.webp",
+              "full": "images/ai/greek-gods/full/002.webp",
+              "src_name": "资源 45.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/003.webp",
+              "full": "images/ai/greek-gods/full/003.webp",
+              "src_name": "资源 46.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/004.webp",
+              "full": "images/ai/greek-gods/full/004.webp",
+              "src_name": "资源 47.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/005.webp",
+              "full": "images/ai/greek-gods/full/005.webp",
+              "src_name": "资源 48.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/006.webp",
+              "full": "images/ai/greek-gods/full/006.webp",
+              "src_name": "资源 49.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/007.webp",
+              "full": "images/ai/greek-gods/full/007.webp",
+              "src_name": "资源 50.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/008.webp",
+              "full": "images/ai/greek-gods/full/008.webp",
+              "src_name": "资源 51.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/009.webp",
+              "full": "images/ai/greek-gods/full/009.webp",
+              "src_name": "资源 52.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/010.webp",
+              "full": "images/ai/greek-gods/full/010.webp",
+              "src_name": "资源 53.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/011.webp",
+              "full": "images/ai/greek-gods/full/011.webp",
+              "src_name": "资源 54.png"
+            },
+            {
+              "thumb": "images/ai/greek-gods/thumb/012.webp",
+              "full": "images/ai/greek-gods/full/012.webp",
+              "src_name": "资源 55.png"
+            }
+          ]
+        },
+        {
+          "slug": "marvel",
+          "title_cn": "漫威",
+          "title_en": "Marvel",
+          "items": [
+            {
+              "thumb": "images/ai/marvel/thumb/001.webp",
+              "full": "images/ai/marvel/full/001.webp",
+              "src_name": "jazzk4636_Black_Panthers_vibranium_shockwave_shatters_the_Golde_54df5d83-bfc6-486e-84bf-e4f0a8940fa6.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/002.webp",
+              "full": "images/ai/marvel/full/002.webp",
+              "src_name": "jazzk4636_Captain_America_is_on_the_roof_of_a_bus_at_night_thro_d3a8a1c9-7487-467b-bd09-bebfa3e2ee12.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/003.webp",
+              "full": "images/ai/marvel/full/003.webp",
+              "src_name": "jazzk4636_Captain_Marvels_cosmic_energy_burst_electric_blue_sui_b97aa5a7-63c2-4d32-afab-75375f0d3be3.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/004.webp",
+              "full": "images/ai/marvel/full/004.webp",
+              "src_name": "jazzk4636_Close-up_of_Wolverine_running_wild_his_adamantium_cla_563f8dfb-2e56-4b11-b329-7474d6786fce.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/005.webp",
+              "full": "images/ai/marvel/full/005.webp",
+              "src_name": "jazzk4636_Doctor_Strange_meditates_and_casts_a_multiverse_spell_ad8f8025-2d75-4085-a431-a98a310e2186.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/006.webp",
+              "full": "images/ai/marvel/full/006.webp",
+              "src_name": "jazzk4636_Iron_Mark_VII_armored_landing_gold_filigree_detail_on_e4aa09ed-02f6-42f4-9872-800c60c220d6.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/007.webp",
+              "full": "images/ai/marvel/full/007.webp",
+              "src_name": "jazzk4636_Jean_Grey_engulfed_in_cosmic_fire_Phoenix_wings_spa_06798840-e823-40e8-a38b-5da55a503736_3.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/008.webp",
+              "full": "images/ai/marvel/full/008.webp",
+              "src_name": "jazzk4636_Scarlet_witch_unleashing_chaos_magic_on_mountain_peak_c2594ffd-b2d0-4730-bdd5-b4dacb5f3638.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/009.webp",
+              "full": "images/ai/marvel/full/009.webp",
+              "src_name": "jazzk4636_The_man_in_the_fire_controls_the_flames_in_the_city_t_ad08bd24-511a-42de-b2d1-df5f041a9efe.png"
+            },
+            {
+              "thumb": "images/ai/marvel/thumb/010.webp",
+              "full": "images/ai/marvel/full/010.webp",
+              "src_name": "jazzk4636_Thor_summons_golden_lightning_on_the_roof_low_angle_s_734e3b22-0d39-4a12-8e95-dda3523257af.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "photography",
+      "title_cn": "摄影作品",
+      "title_en": "Photography",
+      "kind": "main",
+      "items": [
+        {
+          "thumb": "images/photography/thumb/001.webp",
+          "full": "images/photography/full/001.webp",
+          "src_name": "资源 44.png"
+        },
+        {
+          "thumb": "images/photography/thumb/002.webp",
+          "full": "images/photography/full/002.webp",
+          "src_name": "资源 45.png"
+        },
+        {
+          "thumb": "images/photography/thumb/003.webp",
+          "full": "images/photography/full/003.webp",
+          "src_name": "资源 46.png"
+        },
+        {
+          "thumb": "images/photography/thumb/004.webp",
+          "full": "images/photography/full/004.webp",
+          "src_name": "资源 47.png"
+        },
+        {
+          "thumb": "images/photography/thumb/005.webp",
+          "full": "images/photography/full/005.webp",
+          "src_name": "资源 48.png"
+        },
+        {
+          "thumb": "images/photography/thumb/006.webp",
+          "full": "images/photography/full/006.webp",
+          "src_name": "资源 49.png"
+        },
+        {
+          "thumb": "images/photography/thumb/007.webp",
+          "full": "images/photography/full/007.webp",
+          "src_name": "资源 50.png"
+        },
+        {
+          "thumb": "images/photography/thumb/008.webp",
+          "full": "images/photography/full/008.webp",
+          "src_name": "资源 51.png"
+        }
+      ],
+      "groups": []
+    }
+  ]
+}
