@@ -379,125 +379,118 @@
         {
           "thumb": "images/banners/thumb/001.webp",
           "full": "images/banners/full/001.webp",
-          "src_name": "GZZJ0177.jpg",
+          "src_name": "Image 424.png",
           "w": 1000,
-          "h": 313
+          "h": 563
         },
         {
           "thumb": "images/banners/thumb/002.webp",
           "full": "images/banners/full/002.webp",
-          "src_name": "Image 424.png",
+          "src_name": "Image 425.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/003.webp",
           "full": "images/banners/full/003.webp",
-          "src_name": "Image 425.png",
+          "src_name": "Image 426.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/004.webp",
           "full": "images/banners/full/004.webp",
-          "src_name": "Image 426.png",
+          "src_name": "Image 428.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/005.webp",
           "full": "images/banners/full/005.webp",
-          "src_name": "Image 428.png",
+          "src_name": "Image 429.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/006.webp",
           "full": "images/banners/full/006.webp",
-          "src_name": "Image 429.png",
+          "src_name": "Image 430.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/007.webp",
           "full": "images/banners/full/007.webp",
-          "src_name": "Image 430.png",
+          "src_name": "Image 431.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/008.webp",
           "full": "images/banners/full/008.webp",
-          "src_name": "Image 431.png",
+          "src_name": "Image 432.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/009.webp",
           "full": "images/banners/full/009.webp",
-          "src_name": "Image 432.png",
+          "src_name": "Image 433.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/010.webp",
           "full": "images/banners/full/010.webp",
-          "src_name": "Image 433.png",
+          "src_name": "Image 434.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/011.webp",
           "full": "images/banners/full/011.webp",
-          "src_name": "Image 434.png",
+          "src_name": "Image 435.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/012.webp",
           "full": "images/banners/full/012.webp",
-          "src_name": "Image 435.png",
+          "src_name": "Image 436.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/013.webp",
           "full": "images/banners/full/013.webp",
-          "src_name": "Image 436.png",
+          "src_name": "Image 437.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/014.webp",
           "full": "images/banners/full/014.webp",
-          "src_name": "Image 437.png",
+          "src_name": "Image 439.png",
           "w": 1000,
           "h": 563
         },
         {
           "thumb": "images/banners/thumb/015.webp",
           "full": "images/banners/full/015.webp",
-          "src_name": "Image 439.png",
-          "w": 1000,
-          "h": 563
-        },
-        {
-          "thumb": "images/banners/thumb/016.webp",
-          "full": "images/banners/full/016.webp",
           "src_name": "MYIC4948.jpg",
           "w": 1000,
           "h": 438
         },
         {
-          "thumb": "images/banners/thumb/017.webp",
-          "full": "images/banners/full/017.webp",
+          "thumb": "images/banners/thumb/016.webp",
+          "full": "images/banners/full/016.webp",
           "src_name": "NSMO4255.jpg",
           "w": 915,
           "h": 418
         },
         {
-          "thumb": "images/banners/thumb/018.webp",
-          "full": "images/banners/full/018.webp",
+          "thumb": "images/banners/thumb/017.webp",
+          "full": "images/banners/full/017.webp",
           "src_name": "鞋子.jpg",
           "w": 1000,
           "h": 507
@@ -515,36 +508,36 @@
         {
           "thumb": "images/webdesign/thumb/001.webp",
           "full": "images/webdesign/full/001.webp",
-          "src_name": "POLLYFAB Website UI.png",
-          "w": 287,
+          "src_name": "01.png",
+          "w": 355,
           "h": 1000
         },
         {
           "thumb": "images/webdesign/thumb/002.webp",
           "full": "images/webdesign/full/002.webp",
-          "src_name": "screenshot-1779313458739.png",
-          "w": 353,
+          "src_name": "02.png",
+          "w": 355,
           "h": 1000
         },
         {
           "thumb": "images/webdesign/thumb/003.webp",
           "full": "images/webdesign/full/003.webp",
-          "src_name": "screenshot-1779317851315.png",
+          "src_name": "03.png",
           "w": 355,
           "h": 1000
         },
         {
           "thumb": "images/webdesign/thumb/004.webp",
           "full": "images/webdesign/full/004.webp",
-          "src_name": "screenshot-1779318056922.png",
-          "w": 665,
+          "src_name": "04.png",
+          "w": 355,
           "h": 1000
         },
         {
           "thumb": "images/webdesign/thumb/005.webp",
           "full": "images/webdesign/full/005.webp",
-          "src_name": "screenshot-2026-05-20T22-02-22.png",
-          "w": 181,
+          "src_name": "05.png",
+          "w": 676,
           "h": 1000
         }
       ],
@@ -677,13 +670,6 @@
               "src_name": "jazzk4636_Low-angle_shot_Asian_girl_with_messy_braid_back_top_l_647e1652-e596-4ceb-b804-a3c401e69f73.png",
               "w": 667,
               "h": 1000
-            },
-            {
-              "thumb": "images/ai/portraits/thumb/007.webp",
-              "full": "images/ai/portraits/full/007.webp",
-              "src_name": "jazzk4636_Worms-eye_view_child_blowing_rainbow_soap_bubbles_in__ee2e909b-e8b0-45eb-b58c-6c803328968d.png",
-              "w": 1000,
-              "h": 560
             }
           ]
         },
@@ -730,62 +716,48 @@
             {
               "thumb": "images/ai/personal/thumb/006.webp",
               "full": "images/ai/personal/full/006.webp",
-              "src_name": "jazzk4636_combustion_sword_cleaving_chromatic_aberration_voids__268fb76b-0598-4371-ad09-5831b1b7a0ab.png",
+              "src_name": "jazzk4636_fractured_cubist_swordsman_slicing_through_prismatic__94b44042-9a65-4c19-ab4b-1d60fbcedc64.png",
               "w": 560,
               "h": 1000
             },
             {
               "thumb": "images/ai/personal/thumb/007.webp",
               "full": "images/ai/personal/full/007.webp",
-              "src_name": "jazzk4636_fractured_cubist_swordsman_slicing_through_prismatic__94b44042-9a65-4c19-ab4b-1d60fbcedc64.png",
+              "src_name": "jazzk4636_low_lunge_thrust_with_parallel_blades_strike_path_war_8a6f31b1-cf3c-4323-9c4e-6fdafe71dff8.png",
               "w": 560,
               "h": 1000
             },
             {
               "thumb": "images/ai/personal/thumb/008.webp",
               "full": "images/ai/personal/full/008.webp",
-              "src_name": "jazzk4636_kinetic_figure_breaking_titanium_chains_shattered_r_aaf73f85-d2f1-4007-aa0d-0282ad27b0b7_0.png",
+              "src_name": "jazzk4636_mercury_human_figure_melting_into_ocean_vortex_liquid_560e5f63-de40-48e7-84d5-c224d92d8b6b.png",
               "w": 560,
               "h": 1000
             },
             {
               "thumb": "images/ai/personal/thumb/009.webp",
               "full": "images/ai/personal/full/009.webp",
-              "src_name": "jazzk4636_low_lunge_thrust_with_parallel_blades_strike_path_war_8a6f31b1-cf3c-4323-9c4e-6fdafe71dff8.png",
+              "src_name": "jazzk4636_quantum_wings_piercing_through_binary_code_prison_hol_8024464c-7e97-43e7-a359-8defe1bcf18c.png",
               "w": 560,
               "h": 1000
             },
             {
               "thumb": "images/ai/personal/thumb/010.webp",
               "full": "images/ai/personal/full/010.webp",
-              "src_name": "jazzk4636_mercury_human_figure_melting_into_ocean_vortex_liquid_560e5f63-de40-48e7-84d5-c224d92d8b6b.png",
+              "src_name": "jazzk4636_self-reflection_in_broken_mirror1.5_1950s_Chicago_s_c1dd19f7-70f5-4b87-92a1-b00248aa4d02_1.png",
               "w": 560,
               "h": 1000
             },
             {
               "thumb": "images/ai/personal/thumb/011.webp",
               "full": "images/ai/personal/full/011.webp",
-              "src_name": "jazzk4636_quantum_wings_piercing_through_binary_code_prison_hol_8024464c-7e97-43e7-a359-8defe1bcf18c.png",
+              "src_name": "jazzk4636_spinning_blades_entangling_observer_effect_sword_trai_22025913-0cdc-439a-933b-c70de74dca63.png",
               "w": 560,
               "h": 1000
             },
             {
               "thumb": "images/ai/personal/thumb/012.webp",
               "full": "images/ai/personal/full/012.webp",
-              "src_name": "jazzk4636_self-reflection_in_broken_mirror1.5_1950s_Chicago_s_c1dd19f7-70f5-4b87-92a1-b00248aa4d02_1.png",
-              "w": 560,
-              "h": 1000
-            },
-            {
-              "thumb": "images/ai/personal/thumb/013.webp",
-              "full": "images/ai/personal/full/013.webp",
-              "src_name": "jazzk4636_spinning_blades_entangling_observer_effect_sword_trai_22025913-0cdc-439a-933b-c70de74dca63.png",
-              "w": 560,
-              "h": 1000
-            },
-            {
-              "thumb": "images/ai/personal/thumb/014.webp",
-              "full": "images/ai/personal/full/014.webp",
               "src_name": "jazzk4636_spinning_blades_entangling_observer_effect_sword_trai_41da0531-cc29-4003-ba30-73e409d5718a.png",
               "w": 560,
               "h": 1000
@@ -990,13 +962,6 @@
               "thumb": "images/ai/marvel/thumb/009.webp",
               "full": "images/ai/marvel/full/009.webp",
               "src_name": "jazzk4636_The_man_in_the_fire_controls_the_flames_in_the_city_t_ad08bd24-511a-42de-b2d1-df5f041a9efe.png",
-              "w": 1000,
-              "h": 560
-            },
-            {
-              "thumb": "images/ai/marvel/thumb/010.webp",
-              "full": "images/ai/marvel/full/010.webp",
-              "src_name": "jazzk4636_Thor_summons_golden_lightning_on_the_roof_low_angle_s_734e3b22-0d39-4a12-8e95-dda3523257af.png",
               "w": 1000,
               "h": 560
             }
