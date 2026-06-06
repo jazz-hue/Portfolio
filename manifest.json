@@ -2,11 +2,12 @@
   "profile": {
     "name_cn": "王玮",
     "name_en": "Wang Wei",
+    "alias": "jazzkai",
     "title_cn": "平面设计师 / 视觉传达",
     "title_en": "Graphic Designer & AI Artist",
     "school": "兰州城市学院 视觉传达设计专业",
-    "intro_cn": "您好，我是王玮，一名专注于平面设计的设计师。熟练掌握 Photoshop、Illustrator 等设计软件，熟悉运用各种 AI 工具：MJ、ComfyUI、Nano Banana、Runway，具备扎实的创意设计和品牌视觉表达能力。热爱标志设计、摄影与探索新鲜事物，相信设计可以为生活注入无限可能。",
-    "intro_en": "Hi, I'm Wang Wei — a graphic designer focused on visual communication. Proficient in Photoshop, Illustrator and AI tools (Midjourney, ComfyUI, Nano Banana, Runway). I bring solid creative direction and brand visual skills, with a love for logos, photography, and discovery.",
+    "intro_cn": "您好，我是王玮（jazzkai），一名专注于平面设计的设计师。熟练掌握 Photoshop、Illustrator 等设计软件，熟悉运用各种 AI 工具：MJ、ComfyUI、Nano Banana、Runway，具备扎实的创意设计和品牌视觉表达能力。热爱标志设计、摄影与探索新鲜事物，相信设计可以为生活注入无限可能。",
+    "intro_en": "Hi, I'm Wang Wei (jazzkai) — a graphic designer focused on visual communication. Proficient in Photoshop, Illustrator and AI tools (Midjourney, ComfyUI, Nano Banana, Runway).",
     "email": "wean1234580@gmail.com",
     "wechat": "15609344927",
     "qq": "2298833893",
@@ -25,6 +26,7 @@
       "title_cn": "海报设计",
       "title_en": "Poster Design",
       "kind": "main",
+      "cols": 3,
       "items": [
         {
           "thumb": "images/posters/thumb/001.webp",
@@ -126,9 +128,10 @@
     },
     {
       "slug": "aplus",
-      "title_cn": "A+设计",
+      "title_cn": "A+ 设计",
       "title_en": "A+ Design",
       "kind": "main",
+      "cols": 4,
       "items": [
         {
           "thumb": "images/aplus/thumb/001.webp",
@@ -158,6 +161,7 @@
       "title_cn": "主图设计",
       "title_en": "Product Design",
       "kind": "main",
+      "cols": 4,
       "items": [
         {
           "thumb": "images/products/thumb/001.webp",
@@ -247,6 +251,7 @@
       "title_cn": "H5 设计",
       "title_en": "H5 Design",
       "kind": "main",
+      "cols": 5,
       "items": [
         {
           "thumb": "images/h5/thumb/001.webp",
@@ -281,6 +286,7 @@
       "title_cn": "Banner 设计",
       "title_en": "Banner Design",
       "kind": "main",
+      "cols": 3,
       "items": [
         {
           "thumb": "images/banners/thumb/001.webp",
@@ -360,26 +366,16 @@
         {
           "thumb": "images/banners/thumb/016.webp",
           "full": "images/banners/full/016.webp",
-          "src_name": "Image 440.png"
+          "src_name": "MYIC4948.jpg"
         },
         {
           "thumb": "images/banners/thumb/017.webp",
           "full": "images/banners/full/017.webp",
-          "src_name": "MYIC4948.jpg"
+          "src_name": "NSMO4255.jpg"
         },
         {
           "thumb": "images/banners/thumb/018.webp",
           "full": "images/banners/full/018.webp",
-          "src_name": "NSMO4255.jpg"
-        },
-        {
-          "thumb": "images/banners/thumb/019.webp",
-          "full": "images/banners/full/019.webp",
-          "src_name": "XXMB3577.jpg"
-        },
-        {
-          "thumb": "images/banners/thumb/020.webp",
-          "full": "images/banners/full/020.webp",
           "src_name": "鞋子.jpg"
         }
       ],
@@ -390,6 +386,7 @@
       "title_cn": "网页设计",
       "title_en": "Web Design",
       "kind": "main",
+      "cols": 5,
       "items": [
         {
           "thumb": "images/webdesign/thumb/001.webp",
@@ -424,6 +421,7 @@
       "title_cn": "插画设计",
       "title_en": "Illustration",
       "kind": "main",
+      "cols": 3,
       "items": [
         {
           "thumb": "images/illustration/thumb/001.webp",
@@ -458,21 +456,16 @@
         {
           "thumb": "images/illustration/thumb/007.webp",
           "full": "images/illustration/full/007.webp",
-          "src_name": "Image 267.png"
+          "src_name": "Jinx.jpg"
         },
         {
           "thumb": "images/illustration/thumb/008.webp",
           "full": "images/illustration/full/008.webp",
-          "src_name": "Jinx.jpg"
+          "src_name": "lpatterson_League_of_Legends_style_big_perspective_strong_story_aa70e124-1822-4f10-9b8a-8f0dd0de9d08.png"
         },
         {
           "thumb": "images/illustration/thumb/009.webp",
           "full": "images/illustration/full/009.webp",
-          "src_name": "lpatterson_League_of_Legends_style_big_perspective_strong_story_aa70e124-1822-4f10-9b8a-8f0dd0de9d08.png"
-        },
-        {
-          "thumb": "images/illustration/thumb/010.webp",
-          "full": "images/illustration/full/010.webp",
           "src_name": "莫甘娜.jpg"
         }
       ],
@@ -483,6 +476,7 @@
       "title_cn": "AI 设计",
       "title_en": "AI Design",
       "kind": "ai",
+      "cols": 3,
       "items": [],
       "groups": [
         {
@@ -766,50 +760,71 @@
       "slug": "photography",
       "title_cn": "摄影作品",
       "title_en": "Photography",
-      "kind": "main",
-      "items": [
+      "kind": "photo",
+      "cols": 3,
+      "items": [],
+      "groups": [
         {
-          "thumb": "images/photography/thumb/001.webp",
-          "full": "images/photography/full/001.webp",
-          "src_name": "资源 44.png"
+          "slug": "product",
+          "title_cn": "产品摄影",
+          "title_en": "Product",
+          "items": [
+            {
+              "thumb": "images/photography/product/thumb/001.webp",
+              "full": "images/photography/product/full/001.webp",
+              "src_name": "资源 45.png"
+            },
+            {
+              "thumb": "images/photography/product/thumb/002.webp",
+              "full": "images/photography/product/full/002.webp",
+              "src_name": "资源 46.png"
+            },
+            {
+              "thumb": "images/photography/product/thumb/003.webp",
+              "full": "images/photography/product/full/003.webp",
+              "src_name": "资源 47.png"
+            },
+            {
+              "thumb": "images/photography/product/thumb/004.webp",
+              "full": "images/photography/product/full/004.webp",
+              "src_name": "资源 48.png"
+            },
+            {
+              "thumb": "images/photography/product/thumb/005.webp",
+              "full": "images/photography/product/full/005.webp",
+              "src_name": "资源 49.png"
+            },
+            {
+              "thumb": "images/photography/product/thumb/006.webp",
+              "full": "images/photography/product/full/006.webp",
+              "src_name": "资源 50.png"
+            }
+          ]
         },
         {
-          "thumb": "images/photography/thumb/002.webp",
-          "full": "images/photography/full/002.webp",
-          "src_name": "资源 45.png"
+          "slug": "landscape",
+          "title_cn": "风景场景",
+          "title_en": "Landscape & Scene",
+          "items": [
+            {
+              "thumb": "images/photography/landscape/thumb/001.webp",
+              "full": "images/photography/landscape/full/001.webp",
+              "src_name": "资源 44.png"
+            },
+            {
+              "thumb": "images/photography/landscape/thumb/002.webp",
+              "full": "images/photography/landscape/full/002.webp",
+              "src_name": "资源 51.png"
+            }
+          ]
         },
         {
-          "thumb": "images/photography/thumb/003.webp",
-          "full": "images/photography/full/003.webp",
-          "src_name": "资源 46.png"
-        },
-        {
-          "thumb": "images/photography/thumb/004.webp",
-          "full": "images/photography/full/004.webp",
-          "src_name": "资源 47.png"
-        },
-        {
-          "thumb": "images/photography/thumb/005.webp",
-          "full": "images/photography/full/005.webp",
-          "src_name": "资源 48.png"
-        },
-        {
-          "thumb": "images/photography/thumb/006.webp",
-          "full": "images/photography/full/006.webp",
-          "src_name": "资源 49.png"
-        },
-        {
-          "thumb": "images/photography/thumb/007.webp",
-          "full": "images/photography/full/007.webp",
-          "src_name": "资源 50.png"
-        },
-        {
-          "thumb": "images/photography/thumb/008.webp",
-          "full": "images/photography/full/008.webp",
-          "src_name": "资源 51.png"
+          "slug": "portrait",
+          "title_cn": "人像摄影",
+          "title_en": "Portrait",
+          "items": []
         }
-      ],
-      "groups": []
+      ]
     }
   ]
 }
