@@ -1,0 +1,131 @@
+{
+  "illustration": [],
+  "album": [
+    {
+      "thumb": "images/album/thumb/001.webp",
+      "full": "images/album/full/001.webp",
+      "src_name": "2.0_01封面.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/002.webp",
+      "full": "images/album/full/002.webp",
+      "src_name": "2.0_02.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/003.webp",
+      "full": "images/album/full/003.webp",
+      "src_name": "2.0-03.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/004.webp",
+      "full": "images/album/full/004.webp",
+      "src_name": "2.0-04.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/005.webp",
+      "full": "images/album/full/005.webp",
+      "src_name": "2.0-05.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/006.webp",
+      "full": "images/album/full/006.webp",
+      "src_name": "2.0-06.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/007.webp",
+      "full": "images/album/full/007.webp",
+      "src_name": "2.0-07.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/008.webp",
+      "full": "images/album/full/008.webp",
+      "src_name": "2.0-08.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/009.webp",
+      "full": "images/album/full/009.webp",
+      "src_name": "2.0-09.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/010.webp",
+      "full": "images/album/full/010.webp",
+      "src_name": "2.0-10.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/011.webp",
+      "full": "images/album/full/011.webp",
+      "src_name": "2.0-11.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/012.webp",
+      "full": "images/album/full/012.webp",
+      "src_name": "2.0-12.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/013.webp",
+      "full": "images/album/full/013.webp",
+      "src_name": "2.0-13.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/014.webp",
+      "full": "images/album/full/014.webp",
+      "src_name": "2.0-14.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/015.webp",
+      "full": "images/album/full/015.webp",
+      "src_name": "2.0-15.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/016.webp",
+      "full": "images/album/full/016.webp",
+      "src_name": "2.0-16.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/017.webp",
+      "full": "images/album/full/017.webp",
+      "src_name": "2.0-17.png",
+      "w": 1000,
+      "h": 707
+    },
+    {
+      "thumb": "images/album/thumb/018.webp",
+      "full": "images/album/full/018.webp",
+      "src_name": "2.0-18.png",
+      "w": 1000,
+      "h": 707
+    }
+  ]
+}
