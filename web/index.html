@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>王玮 Wang Wei · Portfolio 2025</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="王玮 Wang Wei — 视觉传达设计师 / AI 创作 · Portfolio 2025">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0a0a; --bg2:#141414; --fg:#fff; --mute:#7d7d83;
+  --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.22);
+  --red:#E5132A;        /* 主点缀红 */
+  --red-d:#A30E1F;
+  --font-en:'Space Grotesk','Inter',system-ui,sans-serif;
+  --font-cn:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+  --font-cn-s:'Noto Serif SC','PingFang SC',serif;
+  --pad: clamp(20px, 4vw, 64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--fg);font-family:var(--font-en);overflow-x:hidden}
+body{min-height:100vh;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+::selection{background:var(--red);color:#fff}
+
+/* ===== loader ===== */
+#loader{position:fixed;inset:0;background:var(--bg);z-index:9000;display:flex;align-items:flex-end;padding:var(--pad);transition:opacity .8s,visibility .8s}
+#loader.gone{opacity:0;visibility:hidden}
+#loader .lwrap{width:100%;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
+#loader .lname{font-family:var(--font-en);font-size:13px;letter-spacing:.3em;text-transform:uppercase}
+#loader .lname b{color:var(--red)}
+#loader .lpct{font-family:var(--font-en);font-size:clamp(64px,16vw,200px);font-weight:700;letter-spacing:-.02em;line-height:.85}
+#loader .lpct span{color:var(--red)}
+#loader .lbar{position:fixed;left:0;right:0;bottom:0;height:2px;background:var(--line)}
+#loader .lbar::after{content:"";position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(0);transition:transform .25s}
+
+/* ===== nav ===== */
+.nav{position:fixed;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;padding:20px var(--pad);z-index:80;mix-blend-mode:difference;color:#fff}
+.nav .logo{display:flex;align-items:center;gap:10px;font-family:var(--font-en);font-weight:700;letter-spacing:.18em;font-size:14px}
+.nav .logo::before{content:"";width:10px;height:10px;background:var(--red);border-radius:50%}
+.nav .logo small{display:block;font-size:9px;letter-spacing:.32em;color:var(--red);margin-top:2px;line-height:1}
+.nav .links{display:flex;gap:30px;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.nav .links a{position:relative;padding:8px 0;display:flex;align-items:center;gap:6px}
+.nav .links a::before{content:"";width:0;height:1px;background:var(--red);transition:width .35s cubic-bezier(.2,.7,.2,1)}
+.nav .links a:hover::before{width:18px}
+.nav .menu-btn{display:none;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#fff}
+.nav .menu-btn b{color:var(--red)}
+@media (max-width:780px){
+  .nav .links{display:none}
+  .nav .menu-btn{display:inline-block}
+}
+.drawer{position:fixed;inset:0;background:var(--bg);z-index:90;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;opacity:0;visibility:hidden;transition:opacity .35s,visibility .35s}
+.drawer.open{opacity:1;visibility:visible}
+.drawer a{display:flex;flex-direction:column;align-items:center;text-align:center;font-family:var(--font-cn);font-size:22px;font-weight:700;position:relative;padding:8px 28px;min-width:160px;gap:4px}
+.drawer a small{display:block;font-family:var(--font-en);font-size:10px;letter-spacing:.3em;color:var(--mute);text-transform:uppercase;text-align:center}
+.drawer .close{position:absolute;top:18px;right:var(--pad);font-size:24px}
+
+/* ===== HERO (geometric) ===== */
+.hero{position:relative;min-height:100svh;overflow:hidden;padding:var(--pad);padding-top:120px;display:flex;align-items:flex-end}
+.hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+/* faint grid */
+.hero-grid{position:absolute;inset:0;background-image:
+  linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 70% at 60% 50%, #000 30%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 70% at 60% 50%, #000 30%, transparent 80%);
+}
+/* big rotating red ring */
+.hero-ring{position:absolute;right:-180px;top:50%;width:780px;height:780px;border:1.5px solid var(--red);border-radius:50%;transform:translateY(-50%);opacity:.55;animation:spin 40s linear infinite}
+.hero-ring::before{content:"";position:absolute;left:-10px;top:50%;width:18px;height:18px;background:var(--red);border-radius:50%;box-shadow:0 0 24px var(--red)}
+.hero-ring::after{content:"";position:absolute;inset:80px;border:1px dashed rgba(229,19,42,.35);border-radius:50%;animation:spin 28s linear infinite reverse}
+.hero-ring2{position:absolute;left:-12%;bottom:-25%;width:520px;height:520px;border:1px solid rgba(229,19,42,.35);border-radius:50%;opacity:.6;animation:spin 80s linear infinite reverse}
+.hero-ring2::after{content:"";position:absolute;inset:40px;border:1px dashed rgba(255,255,255,.12);border-radius:50%}
+@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+/* floating squares + dots */
+.hero-shape{position:absolute;will-change:transform}
+.hs-1{left:8%;top:18%;width:36px;height:36px;border:1.5px solid #fff;animation:float 6s ease-in-out infinite}
+.hs-2{right:18%;top:14%;width:14px;height:14px;background:var(--red);animation:floatBig 4s ease-in-out infinite .8s;box-shadow:0 0 18px rgba(229,19,42,.7)}
+.hs-3{left:34%;top:42%;width:6px;height:6px;background:#fff;border-radius:50%;animation:float 5s ease-in-out infinite 1.2s;box-shadow:0 0 14px rgba(255,255,255,.8)}
+.hs-4{right:34%;bottom:32%;width:80px;height:1px;background:var(--red);transform-origin:left;animation:scan 3s ease-in-out infinite}
+.hs-5{left:64%;top:28%;width:24px;height:24px;border:1px solid var(--red);transform:rotate(45deg);animation:spinRot 8s linear infinite}
+.hs-6{left:14%;bottom:28%;width:10px;height:10px;background:#fff;border-radius:50%;animation:blink 1.8s ease-in-out infinite}
+.hs-7{right:8%;bottom:18%;width:42px;height:42px;border:1px solid var(--line2);border-radius:50%;animation:float 7s ease-in-out infinite 1.5s}
+.hs-7::after{content:"";position:absolute;inset:14px;background:var(--red);border-radius:50%}
+.hs-8{left:48%;bottom:14%;width:4px;height:4px;background:var(--red);border-radius:50%;animation:trail 3.5s ease-in-out infinite;box-shadow:0 0 10px var(--red)}
+.hs-9{right:48%;top:20%;width:60px;height:1px;background:linear-gradient(90deg,transparent,#fff,transparent);animation:scan 2.4s ease-in-out infinite .4s}
+.hs-10{left:24%;top:62%;width:18px;height:18px;border:1px dashed var(--red);border-radius:50%;animation:spinRot 12s linear infinite reverse}
+.hs-11{right:14%;top:46%;width:8px;height:8px;background:#fff;border-radius:50%;animation:blink 1.2s ease-in-out infinite .3s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-26px) rotate(12deg)}}
+@keyframes floatBig{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-12px,-32px) scale(1.2)}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes scan{0%,100%{transform:scaleX(.2);opacity:.4}50%{transform:scaleX(1.5);opacity:1}}
+@keyframes spinRot{to{transform:rotate(360deg)}}
+@keyframes trail{0%{transform:translate(0,0);opacity:1}50%{transform:translate(60px,-40px);opacity:.4}100%{transform:translate(0,0);opacity:1}}
+/* diagonal red bar */
+.hero-bar{position:absolute;left:-10%;top:30%;width:140%;height:1px;background:linear-gradient(90deg,transparent, var(--red) 30%, var(--red) 70%, transparent);transform:rotate(-12deg);opacity:.5;animation:barPulse 5s ease-in-out infinite}
+.hero-bar2{position:absolute;left:-10%;bottom:18%;width:140%;height:1px;background:linear-gradient(90deg,transparent, rgba(255,255,255,.4) 30%, rgba(255,255,255,.4) 70%, transparent);transform:rotate(6deg);opacity:.3;animation:barPulse 7s ease-in-out infinite .8s}
+@keyframes barPulse{0%,100%{opacity:.2}50%{opacity:.65}}
+/* digital scan line moving vertically */
+.hero-scanline{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(229,19,42,.6) 20%,rgba(229,19,42,.6) 80%,transparent);top:0;animation:vscan 9s linear infinite;opacity:.6;pointer-events:none}
+@keyframes vscan{0%{top:-5%}100%{top:105%}}
+/* faint glow blob */
+.hero-glow{position:absolute;left:30%;top:30%;width:520px;height:520px;background:radial-gradient(circle, rgba(229,19,42,.18), transparent 65%);filter:blur(40px);animation:glowDrift 14s ease-in-out infinite;pointer-events:none}
+@keyframes glowDrift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(80px,-40px) scale(1.2)}}
+/* alias glitch */
+.hero h1 .alias{position:relative}
+.hero h1 .alias::before,.hero h1 .alias::after{content:attr(data-text);position:absolute;left:0;top:0;width:100%;height:100%;color:var(--red);opacity:0}
+.hero h1 .alias::before{animation:glitchA 5s steps(1) infinite}
+.hero h1 .alias::after{animation:glitchB 5s steps(1) infinite .25s;color:#0ff}
+@keyframes glitchA{0%,92%,100%{opacity:0;transform:translate(0,0)}93%{opacity:.8;transform:translate(-2px,1px)}95%{opacity:0}}
+@keyframes glitchB{0%,90%,100%{opacity:0;transform:translate(0,0)}91%{opacity:.8;transform:translate(2px,-1px)}94%{opacity:0}}
+
+.hero-inner{position:relative;z-index:2;width:100%}
+/* hero 2-col: info left, logo right */
+@media (min-width:900px){
+  .hero-inner{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:flex-end}
+  .hero h1{font-size:clamp(56px,8.5vw,160px)}
+}
+.hero-left{min-width:0}
+/* JK logo block */
+.hero-logo{position:relative;aspect-ratio:1;width:100%;max-width:440px;margin-left:auto;display:flex;align-items:center;justify-content:center;align-self:center;margin-bottom:8vh}
+.hero-logo::before{content:"";position:absolute;inset:18%;border-radius:50%;background:radial-gradient(circle, rgba(229,19,42,.22), transparent 70%);animation:logoPulse 4s ease-in-out infinite;pointer-events:none}
+@keyframes logoPulse{0%,100%{transform:scale(1);opacity:.6}50%{transform:scale(1.18);opacity:1}}
+.hero-logo .logo-img{width:78%;height:auto;object-fit:contain;filter:drop-shadow(0 0 20px rgba(229,19,42,.45));transition:all .5s cubic-bezier(.2,.7,.2,1);position:relative;z-index:2;opacity:0;transform:scale(.86) rotate(-4deg);animation:logoIn 1.4s cubic-bezier(.2,.7,.2,1) .6s forwards;display:block}
+@keyframes logoIn{to{opacity:.75;transform:scale(1) rotate(0)}}
+.hero-logo:hover .logo-img{opacity:1;transform:scale(1.05);filter:drop-shadow(0 0 40px rgba(229,19,42,.9)) brightness(.95) invert(18%) sepia(96%) saturate(7434%) hue-rotate(354deg)}
+/* full-hero frosted glass overlay (uses uploaded texture) */
+.hero::after{content:"";position:absolute;inset:0;background:url(images/about/毛玻璃.png) center/cover no-repeat;mix-blend-mode:screen;opacity:.08;pointer-events:none;z-index:1;animation:glassDrift 18s ease-in-out infinite}
+@keyframes glassDrift{0%,100%{transform:scale(1) translate(0,0)}50%{transform:scale(1.04) translate(-1%,-1%)}}
+.hero-inner,.hero .corner,.scroll-cta{z-index:3}
+.hero-logo .logo-ring{position:absolute;inset:0;border:1px solid rgba(229,19,42,.4);border-radius:50%;animation:spin 28s linear infinite;pointer-events:none}
+.hero-logo .logo-ring::after{content:"";position:absolute;left:-7px;top:50%;width:14px;height:14px;background:var(--red);border-radius:50%;box-shadow:0 0 22px var(--red);transform:translateY(-50%)}
+.hero-logo .logo-ring2{position:absolute;inset:10%;border:1px dashed rgba(229,19,42,.35);border-radius:50%;animation:spin 18s linear infinite reverse;pointer-events:none}
+.hero-logo .logo-ring2::before{content:"";position:absolute;right:-5px;top:30%;width:10px;height:10px;background:#fff;border-radius:50%;box-shadow:0 0 12px #fff}
+.hero-logo .logo-orbit{position:absolute;inset:-3%;animation:spin 14s linear infinite;pointer-events:none}
+.hero-logo .logo-orbit span{position:absolute;left:50%;top:0;transform:translateX(-50%);width:6px;height:6px;background:var(--red);border-radius:50%;box-shadow:0 0 14px var(--red)}
+.hero-logo .logo-label{position:absolute;bottom:-32px;left:0;right:0;text-align:center;font-family:var(--font-en);font-size:10px;letter-spacing:.45em;color:var(--mute);text-transform:uppercase}
+.hero-logo .logo-label b{color:var(--red);font-weight:700}
+@media (max-width:900px){
+  .hero-logo{max-width:200px;margin:0 0 40px auto}
+  .hero-logo .logo-label{display:none}
+}
+@media (max-width:560px){
+  .hero-logo{max-width:160px;margin:0 auto 30px}
+}
+.hero .eyebrow{display:flex;gap:24px;flex-wrap:wrap;font-family:var(--font-en);font-size:11px;letter-spacing:.32em;color:var(--mute);text-transform:uppercase;margin-bottom:24px}
+.hero .eyebrow span{display:inline-flex;align-items:center;gap:8px}
+.hero .eyebrow span::before{content:"";width:6px;height:6px;background:var(--red);border-radius:50%}
+.hero h1{font-family:var(--font-cn);font-weight:900;font-size:clamp(72px,15vw,240px);line-height:.85;letter-spacing:-.03em;display:flex;align-items:baseline;gap:.12em;flex-wrap:wrap}
+.hero h1 .slash{color:var(--red);font-family:var(--font-en);font-weight:700;display:inline-block;transform:translateY(-.08em)}
+.hero h1 .alias{color:var(--red);font-family:var(--font-en);font-weight:700;font-style:italic;font-size:clamp(28px,5vw,72px);align-self:flex-end;padding-bottom:.18em;letter-spacing:.02em}
+.hero h1 .en{display:block;width:100%;font-family:var(--font-en);font-size:clamp(20px,3.4vw,52px);font-weight:400;letter-spacing:.02em;color:#cfcfd4;margin-top:18px}
+.hero .meta{display:flex;justify-content:space-between;align-items:flex-end;margin-top:36px;gap:18px;flex-wrap:wrap;font-family:var(--font-en);font-size:12px;color:var(--mute);letter-spacing:.18em;text-transform:uppercase}
+.hero .meta .tag{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid var(--line2);border-radius:999px}
+.hero .meta .tag::before{content:"";width:8px;height:8px;background:var(--red);border-radius:50%;animation:blink 1.6s infinite}
+/* scroll cta — vertical line w/ dropping dot + arrow chevron */
+.scroll-cta{position:absolute;right:var(--pad);bottom:var(--pad);z-index:3;display:inline-flex;align-items:center;gap:14px;color:#fff;font-family:var(--font-en);font-size:11px;letter-spacing:.32em;text-transform:uppercase;padding:10px 18px;border:1px solid var(--line2);border-radius:999px;transition:.35s cubic-bezier(.2,.7,.2,1);overflow:hidden;background:rgba(10,10,10,.4);backdrop-filter:blur(8px)}
+.scroll-cta::before{content:"";position:absolute;inset:0;background:var(--red);transform:translateX(-101%);transition:transform .4s cubic-bezier(.2,.7,.2,1);z-index:-1}
+.scroll-cta:hover{border-color:var(--red);padding-left:24px;padding-right:24px}
+.scroll-cta:hover::before{transform:translateX(0)}
+.scroll-cta .sc-line{display:inline-block;width:2px;height:22px;background:rgba(255,255,255,.2);position:relative;overflow:hidden;border-radius:2px}
+.scroll-cta .sc-dot{position:absolute;left:0;top:0;width:100%;height:6px;background:var(--red);border-radius:2px;animation:dropDot 1.8s cubic-bezier(.5,0,.5,1) infinite}
+@keyframes dropDot{0%{top:-30%;opacity:0}20%{opacity:1}80%{opacity:1}100%{top:120%;opacity:0}}
+.scroll-cta .sc-arrow{display:inline-flex;align-items:center;justify-content:center;animation:arrowBounce 1.6s ease-in-out infinite}
+@keyframes arrowBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+/* back to top */
+.back-top{position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.18);background:rgba(20,20,20,.6);backdrop-filter:blur(10px);color:rgba(255,255,255,.5);display:flex;align-items:center;justify-content:center;z-index:200;opacity:0;visibility:hidden;transform:translateY(20px);transition:opacity .4s cubic-bezier(.2,.7,.2,1),transform .4s cubic-bezier(.2,.7,.2,1),background .3s,border-color .3s,color .3s,box-shadow .3s}
+.back-top.show{opacity:.4;visibility:visible;transform:translateY(0)}
+.back-top:hover{opacity:1;background:var(--red);border-color:var(--red);color:#fff;box-shadow:0 8px 32px rgba(229,19,42,.4)}
+.back-top svg{transition:transform .3s}
+.back-top:hover svg{transform:translateY(-3px)}
+.back-top::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--red);opacity:0;transform:scale(.9);transition:.4s}
+.back-top:hover::after{opacity:1;transform:scale(1.18)}
+@media (max-width:600px){.back-top{right:16px;bottom:16px;width:42px;height:42px}}
+
+/* corner label */
+.corner{position:absolute;font-family:var(--font-en);font-size:11px;letter-spacing:.32em;color:var(--mute);text-transform:uppercase;z-index:3}
+.corner.tl{top:90px;left:var(--pad)}
+.corner.tr{top:90px;right:var(--pad);text-align:right}
+.corner.tl::after,.corner.tr::after{content:"";display:block;height:1px;width:32px;background:var(--red);margin-top:8px}
+.corner.tr::after{margin-left:auto}
+
+/* ===== marquee ===== */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;padding:22px 0;white-space:nowrap;font-family:var(--font-en);font-weight:700;letter-spacing:0;font-size:clamp(30px,6vw,84px);background:#000}
+.marquee .track{display:inline-block;animation:mq 26s linear infinite}
+.marquee .track span{display:inline-block;padding:0 28px;color:#fff}
+.marquee .track span.muted{color:transparent;-webkit-text-stroke:1px var(--line2)}
+.marquee .track .dot{color:var(--red);padding:0 10px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ===== section base ===== */
+.section{position:relative;padding:140px var(--pad)}
+.shead .nbox{font-family:var(--font-en);font-size:11px;color:var(--mute);letter-spacing:.3em;text-align:right;display:flex;flex-direction:column;align-items:flex-end;line-height:1;flex-shrink:0}
+.shead .nbox b{display:block;font-size:clamp(40px,4.4vw,60px);font-weight:700;color:var(--red);line-height:.85;letter-spacing:-.04em;margin-bottom:8px}
+@media (max-width:780px){.section{padding:80px var(--pad)}.shead .nbox b{font-size:38px}}
+
+/* ===== about ===== */
+.about .nbox{position:absolute;top:30px;right:var(--pad);font-family:var(--font-en);font-size:11px;color:var(--mute);letter-spacing:.3em;text-align:right;display:flex;flex-direction:column;align-items:flex-end;line-height:1;z-index:5}
+.about .nbox b{display:block;font-size:clamp(40px,4.4vw,60px);font-weight:700;color:var(--red);line-height:.85;letter-spacing:-.04em;margin-bottom:8px}
+@media (max-width:780px){.about .nbox{position:static;text-align:left;margin-bottom:20px}.about .nbox b{font-size:38px}}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+@media (max-width:900px){.about{grid-template-columns:1fr;gap:40px}}
+.about .label{font-family:var(--font-en);font-size:11px;color:var(--red);letter-spacing:.32em;margin-bottom:22px}
+.about h2{font-family:var(--font-cn-s);font-weight:900;font-size:clamp(40px,5.5vw,80px);line-height:1.05;margin-bottom:30px;letter-spacing:-.01em}
+.about h2 b{color:var(--red);font-style:normal}
+.about p{font-family:var(--font-cn);font-size:clamp(15px,1.05vw,17px);color:#cfcfd4;line-height:1.95;max-width:60ch}
+/* skills (replaces stats) */
+.about .skills{margin-top:48px;border-top:1px solid var(--line);padding-top:28px;position:relative}
+.about .skills::before{content:"";position:absolute;top:-1px;left:0;height:1px;width:60px;background:var(--red)}
+.about .skills .slabel{font-family:var(--font-en);font-size:10px;color:var(--mute);letter-spacing:.32em;text-transform:uppercase;margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.about .skills .slabel b{color:var(--red);font-weight:700}
+.about .skills .chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.about .skills .chip{font-family:var(--font-en);font-size:11px;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;border:1px solid var(--line2);border-radius:999px;transition:all .35s cubic-bezier(.2,.7,.2,1);cursor:default;position:relative;overflow:hidden}
+.about .skills .chip::before{content:"";position:absolute;inset:0;background:var(--red);transform:translateX(-101%);transition:transform .4s cubic-bezier(.2,.7,.2,1);z-index:-1}
+.about .skills .chip{position:relative;z-index:0}
+.about .skills .chip:hover{border-color:var(--red);color:#fff}
+.about .skills .chip:hover::before{transform:translateX(0)}
+.about .skills .chip.accent{background:var(--red);border-color:var(--red);color:#fff}
+.about .skills .chip.accent::before{display:none}
+.about .skills .meta{display:flex;gap:32px;flex-wrap:wrap;font-family:var(--font-en);font-size:11px;color:var(--mute);letter-spacing:.24em;text-transform:uppercase}
+.about .skills .meta b{color:#fff;font-weight:500;display:block;font-size:13px;margin-bottom:4px;letter-spacing:.06em;text-transform:none;font-family:var(--font-cn)}
+.about .skills .meta .meta-link{display:block;color:inherit;transition:color .25s;position:relative;padding-right:0}
+.about .skills .meta .meta-link b{display:flex;align-items:center;gap:6px}
+.about .skills .meta .meta-link .arr{display:inline-flex;align-items:center;justify-content:center;width:16px;height:16px;border-radius:50%;border:1px solid var(--red);color:var(--red);font-size:9px;transition:.25s;animation:metaArr 1.8s ease-in-out infinite}
+.about .skills .meta .meta-link:hover{color:var(--red)}
+.about .skills .meta .meta-link:hover b{color:var(--red)}
+.about .skills .meta .meta-link:hover .arr{background:var(--red);color:#fff;transform:rotate(0)}
+@keyframes metaArr{0%,100%{transform:translateY(0)}50%{transform:translateY(3px)}}
+.avatar-wrap{position:relative;aspect-ratio:4/5;overflow:hidden;background:#000}
+.avatar-wrap::before,.avatar-wrap::after{content:"";position:absolute;background:var(--red);z-index:2}
+.avatar-wrap::before{top:0;left:0;width:60px;height:2px}
+.avatar-wrap::after{top:0;left:0;width:2px;height:60px}
+.avatar-wrap .frame-tr,.avatar-wrap .frame-bl{position:absolute;background:var(--red);z-index:2}
+.avatar-wrap .frame-tr{top:0;right:0;width:60px;height:2px}
+.avatar-wrap .frame-tr::after{content:"";position:absolute;top:0;right:0;width:2px;height:60px;background:var(--red)}
+.avatar-wrap .frame-bl{bottom:0;left:0;width:2px;height:60px}
+.avatar-wrap .frame-bl::after{content:"";position:absolute;bottom:0;left:0;width:60px;height:2px;background:var(--red)}
+.avatar-wrap .frame-br{position:absolute;bottom:0;right:0;width:60px;height:2px;background:var(--red);z-index:2}
+.avatar-wrap .frame-br::after{content:"";position:absolute;bottom:0;right:0;width:2px;height:60px;background:var(--red)}
+.avatar-wrap img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1.4s cubic-bezier(.2,.7,.2,1);filter:grayscale(.08)}
+.avatar-wrap:hover img{transform:scale(1.0)}
+.avatar-wrap .label-bottom{position:absolute;left:16px;bottom:14px;font-family:var(--font-en);font-size:11px;letter-spacing:.35em;color:#fff;z-index:3;mix-blend-mode:difference}
+
+/* ===== video reel ===== */
+.video-block{padding:80px var(--pad) 120px;position:relative}
+.video-block .shead{margin-bottom:60px}
+.video-frame{position:relative;aspect-ratio:16/9;overflow:hidden;background:#000;cursor:pointer}
+.video-frame img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1.4s cubic-bezier(.2,.7,.2,1);filter:saturate(.7) brightness(.55)}
+.video-frame:hover img{transform:scale(1.1)}
+.video-frame .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px;color:#fff}
+.video-frame .play .pcircle{width:110px;height:110px;border-radius:50%;border:1.5px solid #fff;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);backdrop-filter:blur(6px);transition:.4s;position:relative}
+.video-frame .play .pcircle::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1.5px solid var(--red);opacity:0;transform:scale(.92);transition:.4s}
+.video-frame:hover .play .pcircle{background:var(--red);border-color:var(--red);transform:scale(1.1)}
+.video-frame:hover .play .pcircle::after{opacity:1;transform:scale(1.18)}
+.video-frame .play .pcircle::before{content:"";border-left:18px solid #fff;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:6px}
+.video-frame .play .ptxt{font-family:var(--font-en);font-size:11px;letter-spacing:.4em;text-transform:uppercase}
+.video-frame .soon{position:absolute;top:18px;left:18px;font-family:var(--font-en);font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:var(--red);color:#fff;padding:7px 13px;display:flex;gap:8px;align-items:center}
+.video-frame .soon::before{content:"";width:6px;height:6px;background:#fff;border-radius:50%;animation:blink 1.4s infinite}
+.video-frame .vmeta{position:absolute;bottom:18px;left:18px;right:18px;display:flex;justify-content:space-between;color:#fff;font-family:var(--font-en);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+@media (max-width:600px){.video-frame .play .pcircle{width:70px;height:70px}.video-frame .play .pcircle::before{border-left-width:14px;border-top-width:9px;border-bottom-width:9px}}
+
+/* ===== Reel carousel ===== */
+.reel-wrap{position:relative;overflow:hidden}
+.reel-track{position:relative;width:100%;aspect-ratio:16/9;background:#000;overflow:hidden}
+.reel-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.reel-slide.active{opacity:1;pointer-events:auto;z-index:2}
+.reel-slide video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.reel-slide .reel-meta{position:absolute;left:18px;bottom:14px;display:flex;align-items:center;gap:14px;font-family:var(--font-en);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#fff;z-index:3;mix-blend-mode:difference;pointer-events:none}
+.reel-slide .reel-meta b{color:var(--red);font-weight:700;letter-spacing:.22em}
+.reel-slide .reel-tag{position:absolute;top:18px;left:18px;font-family:var(--font-en);font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:var(--red);color:#fff;padding:7px 13px;display:flex;gap:8px;align-items:center;z-index:3}
+.reel-slide .reel-tag::before{content:"";width:6px;height:6px;background:#fff;border-radius:50%;animation:blink 1.4s infinite}
+/* prev/next */
+.reel-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:4;width:52px;height:52px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(10,10,10,.55);backdrop-filter:blur(10px);color:#fff;display:flex;align-items:center;justify-content:center;transition:.35s cubic-bezier(.2,.7,.2,1);opacity:.55}
+.reel-wrap:hover .reel-nav{opacity:1}
+.reel-nav:hover{background:var(--red);border-color:var(--red);box-shadow:0 8px 32px rgba(229,19,42,.4);transform:translateY(-50%) scale(1.06)}
+.reel-prev{left:18px}.reel-next{right:18px}
+/* dots */
+.reel-dots{display:flex;justify-content:center;gap:10px;margin-top:24px}
+.reel-dots .dot{width:28px;height:3px;background:rgba(255,255,255,.22);border:0;padding:0;cursor:pointer;transition:.35s cubic-bezier(.2,.7,.2,1);position:relative;overflow:hidden}
+.reel-dots .dot::before{content:"";position:absolute;inset:0;background:var(--red);transform-origin:left;transform:scaleX(0);transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.reel-dots .dot.active{background:rgba(255,255,255,.4);width:48px}
+.reel-dots .dot.active::before{transform:scaleX(1)}
+.reel-dots .dot:hover{background:rgba(255,255,255,.4)}
+/* play overlay (when video is paused/idle) */
+.reel-slide .reel-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;color:#fff;z-index:3;cursor:pointer;background:rgba(0,0,0,.18);transition:opacity .4s}
+.reel-slide.playing .reel-play{opacity:0;pointer-events:none}
+/* bottom controls bar — play/pause + progress + time */
+.reel-controls{position:absolute;left:0;right:0;bottom:0;padding:16px 18px 18px;display:flex;align-items:center;gap:14px;background:linear-gradient(to top, rgba(0,0,0,.65), transparent);z-index:5;opacity:0;transition:opacity .35s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.reel-slide.playing.show-controls .reel-controls,
+.reel-slide.paused .reel-controls,
+.reel-slide:hover .reel-controls{opacity:1;pointer-events:auto}
+.reel-toggle{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.45);backdrop-filter:blur(8px);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.25s cubic-bezier(.2,.7,.2,1);flex-shrink:0;padding:0}
+.reel-toggle:hover{background:var(--red);border-color:var(--red);box-shadow:0 4px 20px rgba(229,19,42,.4)}
+.reel-toggle .ico-play,.reel-toggle .ico-pause{display:flex;align-items:center;justify-content:center}
+.reel-toggle .ico-pause{display:none}
+.reel-slide.playing .reel-toggle .ico-play{display:none}
+.reel-slide.playing .reel-toggle .ico-pause{display:flex}
+.reel-progress{flex:1;height:24px;display:flex;align-items:center;cursor:pointer;position:relative}
+.reel-progress-bg{flex:1;height:3px;background:rgba(255,255,255,.22);position:relative;border-radius:2px;overflow:hidden;transition:height .2s}
+.reel-progress:hover .reel-progress-bg{height:5px}
+.reel-progress-fill{position:absolute;left:0;top:0;bottom:0;background:var(--red);width:0%;transition:width .12s linear;border-radius:2px}
+.reel-progress-buffer{position:absolute;left:0;top:0;bottom:0;background:rgba(255,255,255,.18);width:0%;border-radius:2px}
+.reel-progress-knob{position:absolute;top:50%;transform:translate(-50%,-50%) scale(0);width:12px;height:12px;border-radius:50%;background:var(--red);box-shadow:0 0 12px rgba(229,19,42,.6);transition:transform .2s}
+.reel-progress:hover .reel-progress-knob{transform:translate(-50%,-50%) scale(1)}
+.reel-time{font-family:var(--font-en);font-size:10px;letter-spacing:.18em;color:rgba(255,255,255,.75);min-width:90px;text-align:right;flex-shrink:0;font-variant-numeric:tabular-nums}
+.reel-mute{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.25);background:rgba(0,0,0,.4);backdrop-filter:blur(6px);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:.25s;flex-shrink:0;padding:0}
+.reel-mute:hover{background:var(--red);border-color:var(--red)}
+.reel-mute .ico-unmute{display:none}
+.reel-slide.muted .reel-mute .ico-mute{display:none}
+.reel-slide.muted .reel-mute .ico-unmute{display:flex}
+@media (max-width:600px){
+  .reel-controls{padding:10px 12px 12px;gap:10px}
+  .reel-toggle{width:32px;height:32px}
+  .reel-mute{width:28px;height:28px}
+  .reel-time{font-size:9px;min-width:72px;letter-spacing:.14em}
+}
+.reel-slide .reel-play .pcircle{width:90px;height:90px;border-radius:50%;border:1.5px solid #fff;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.05);backdrop-filter:blur(6px);transition:.4s;position:relative}
+.reel-slide .reel-play .pcircle::after{content:"";position:absolute;inset:-1px;border-radius:50%;border:1.5px solid var(--red);opacity:0;transform:scale(.92);transition:.4s}
+.reel-slide .reel-play .pcircle::before{content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:5px}
+.reel-slide .reel-play:hover .pcircle{background:var(--red);border-color:var(--red);transform:scale(1.08)}
+.reel-slide .reel-play:hover .pcircle::after{opacity:1;transform:scale(1.18)}
+.reel-slide .reel-play .ptxt{font-family:var(--font-en);font-size:11px;letter-spacing:.4em;text-transform:uppercase}
+@media (max-width:600px){
+  .reel-nav{width:38px;height:38px}
+  .reel-prev{left:10px}.reel-next{right:10px}
+  .reel-slide .reel-play .pcircle{width:56px;height:56px}
+  .reel-slide .reel-play .pcircle::before{border-left-width:12px;border-top-width:7px;border-bottom-width:7px}
+  .reel-slide .reel-play .ptxt{font-size:9px;letter-spacing:.3em}
+  .reel-slide .reel-tag{font-size:8px;letter-spacing:.14em;padding:4px 8px;top:10px;left:10px;gap:5px}
+  .reel-slide .reel-tag::before{width:4px;height:4px}
+  .reel-slide .reel-meta{font-size:8px;letter-spacing:.14em;left:10px;bottom:48px;gap:8px}
+  .reel-dots .dot{width:20px}
+  .reel-dots .dot.active{width:36px}
+}
+
+/* ===== section head ===== */
+.shead{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;gap:24px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:24px}
+.shead .ttl{font-family:var(--font-cn-s);font-weight:900;font-size:clamp(46px,6.5vw,108px);line-height:.92;letter-spacing:-.02em}
+.shead .ttl .en{display:block;font-family:var(--font-en);font-size:clamp(12px,1.05vw,14px);font-weight:500;color:var(--red);letter-spacing:.32em;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.shead .ttl .en::before{content:"";width:10px;height:10px;background:var(--red);border-radius:50%}
+.shead .count{display:none}
+
+/* ===== grids ===== */
+.grid{display:grid;gap:clamp(14px,1.8vw,28px)}
+.grid.airy{gap:clamp(20px,2.4vw,40px)}
+/* compact: smaller cards with bigger gaps, ensure fit-in-screen for A+/illustration */
+.grid.compact{gap:clamp(40px,5vw,80px);max-width:min(1400px,90vw);margin:0 auto}
+.grid.compact .card.nat{max-height:78vh}
+.grid.compact .card.nat img{max-height:calc(78vh - 16px);width:auto;max-width:100%;margin:0 auto}
+.grid.compact .card{padding:8px}
+.g-1{grid-template-columns:1fr;max-width:1100px;margin:0 auto}
+/* photography: 大留白 + 单行折叠 */
+#photography .grid{gap:clamp(24px,3.2vw,56px)}
+.g-2{grid-template-columns:repeat(2,1fr)}
+.g-3{grid-template-columns:repeat(3,1fr)}
+.g-4{grid-template-columns:repeat(4,1fr)}
+.g-5{grid-template-columns:repeat(5,1fr)}
+@media (max-width:1180px){.g-5{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:980px){.g-3,.g-4,.g-5{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:780px){.g-3,.g-4,.g-5{grid-template-columns:repeat(2,1fr)}}
+/* ============================================
+   MOBILE ≤560px — 完全独立，不影响桌面端
+   ============================================ */
+@media (max-width:560px){
+  /* ---- Grid ---- */
+  .g-2,.g-3,.g-4,.g-5{grid-template-columns:repeat(2,1fr)}
+  .grid{gap:8px}
+  .grid.airy{gap:14px}
+  .grid.compact{gap:10px;max-width:100%}
+  .grid.compact .card{padding:4px}
+  .grid.compact .card.nat{max-height:none}
+  .grid.compact .card.nat img{max-height:none}
+
+  /* ---- Section / shead ---- */
+  .section{padding:64px var(--pad)}
+  .shead{margin-bottom:28px;padding-bottom:14px;gap:14px}
+  .shead .ttl{font-size:clamp(34px,9vw,44px)}
+  .shead .ttl .en{font-size:10px;letter-spacing:.24em;margin-bottom:8px}
+  .shead .nbox{font-size:9px;letter-spacing:.22em}
+  .shead .nbox b{font-size:28px}
+  .show-more{font-size:10px;padding:10px 18px;letter-spacing:.22em}
+  .show-more-wrap{margin-top:24px}
+
+  /* ---- Nav / corners / marquee ---- */
+  .nav{padding:14px var(--pad)}
+  .nav .logo{font-size:12px}
+  .corner{font-size:9px;letter-spacing:.22em}
+  .corner.tl,.corner.tr{top:64px}
+  .marquee{padding:14px 0;font-size:28px}
+  .marquee .track span{padding:0 14px}
+
+  /* ---- Hero（首屏简化）---- */
+  .hero{padding-top:80px;min-height:92svh;align-items:flex-end}
+  .hero-inner{display:flex;flex-direction:column;gap:0;width:100%}
+  .hero-left{order:2;margin-top:auto}
+  .hero-logo{order:1;max-width:96px;margin:0 0 auto auto;align-self:flex-end}
+  .hero h1{font-size:clamp(52px,14vw,72px);line-height:.86}
+  .hero h1 .en{font-size:13px;margin-top:8px;letter-spacing:.02em}
+  .hero h1 .alias{font-size:28px}
+  .hero .eyebrow{font-size:9px;gap:10px;margin-bottom:14px;flex-wrap:wrap;letter-spacing:.24em}
+  /* 大量浮动元素挡内容 → 隐藏一部分 */
+  .hero-shape.hs-1,.hero-shape.hs-5,.hero-shape.hs-7,.hero-shape.hs-10{display:none}
+  .hero-ring{right:-260px;width:540px;height:540px;opacity:.3}
+  .hero-ring2{display:none}
+  .hero-bar2{display:none}
+  /* scroll cta 收紧 — 更小 */
+  .scroll-cta{right:14px;bottom:14px;font-size:9px;padding:6px 11px;letter-spacing:.22em;gap:7px}
+  .scroll-cta .sc-line{height:14px;width:1.5px}
+  .scroll-cta .sc-arrow svg{width:11px;height:11px}
+
+  /* ---- About（自我介绍）---- */
+  .about{gap:24px}
+  .about .nbox{position:static;text-align:left;margin-bottom:10px;flex-direction:row;align-items:baseline;gap:10px}
+  .about .nbox b{font-size:28px;margin:0}
+  .about .label{margin-bottom:12px;font-size:10px}
+  .about h2{font-size:28px;margin-bottom:18px;line-height:1.18;letter-spacing:0}
+  .about p{font-size:13px;line-height:1.75}
+  .about .skills{margin-top:20px;padding-top:14px}
+  .about .skills .slabel{font-size:9px;margin-bottom:10px}
+  .about .skills .chips{gap:5px;margin-bottom:16px}
+  .about .skills .chip{font-size:9px;padding:5px 9px;letter-spacing:.12em}
+  .about .skills .meta{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;font-size:9px}
+  .about .skills .meta div,.about .skills .meta .meta-link{padding:8px 10px;border:1px solid var(--line);border-radius:6px}
+  .about .skills .meta b{font-size:11px;margin-bottom:2px}
+  .about .skills .meta .meta-link .arr{width:13px;height:13px;font-size:8px}
+  .avatar-wrap{max-width:60%;margin:0 auto}
+
+  /* ---- Video Reel ---- */
+  .video-block{padding:0 var(--pad) 60px}
+  .video-block .shead{margin-bottom:24px}
+  .video-frame .play .pcircle{width:64px;height:64px}
+  .video-frame .play .pcircle::before{border-left-width:12px;border-top-width:8px;border-bottom-width:8px}
+  .video-frame .play .ptxt{font-size:9px;letter-spacing:.3em}
+  .video-frame .soon{font-size:9px;padding:5px 9px;letter-spacing:.18em;top:12px;left:12px}
+  .video-frame .vmeta{bottom:12px;left:12px;right:12px;font-size:9px;letter-spacing:.18em}
+
+  /* ---- AI / 摄影 子分类 tabs（3 列网格 · Figma 同款）---- */
+  .tabs{display:grid !important;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:24px;flex-wrap:initial}
+  .tabs button{font-size:12px;padding:14px 6px;border-radius:4px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;line-height:1.2;width:100%;min-width:0;border:1px solid var(--line2);letter-spacing:.02em;text-align:center;word-break:break-word}
+  .tabs button .en{font-size:8px;margin-left:0;letter-spacing:.16em;display:block;color:var(--mute)}
+  .tabs button.active{background:var(--red);border-color:var(--red)}
+  .tabs button.active .en{color:rgba(255,255,255,.85)}
+
+  /* ---- Contact（紧凑）---- */
+  .contact{padding:48px var(--pad) 32px}
+  .contact h2{font-size:clamp(38px,11vw,56px);margin-bottom:18px;line-height:.95}
+  .contact h2 .en{font-size:13px;margin-top:6px}
+  .contact .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;grid-template-columns:none}
+  .contact .row:hover{padding-left:0}
+  .contact .row .k{font-size:9px;letter-spacing:.2em;flex:0 0 auto;color:var(--mute)}
+  .contact .row .v{font-size:12px;text-align:right;word-break:break-all;flex:1;min-width:0}
+  .contact footer{margin-top:24px;padding-top:14px;font-size:8px;letter-spacing:.14em;gap:6px}
+  .contact .bg-num{display:none}
+
+  /* ---- Lightbox 手机优化 ---- */
+  .lb .lb-close{top:12px;right:12px;width:36px;height:36px;font-size:14px}
+  .lb-meta{bottom:12px;left:12px;font-size:9px;letter-spacing:.22em}
+
+  /* ---- Back top 缩小 ---- */
+  .back-top{width:40px;height:40px;right:14px;bottom:14px}
+}
+
+/* show-more clean cut (no fade) */
+.gallery-wrap{position:relative}
+.gallery-wrap.collapsed .grid{max-height:var(--collapsed-h, 1200px);overflow:hidden}
+.show-more-wrap{display:flex;justify-content:center;margin-top:48px}
+.show-more{font-family:var(--font-en);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:#fff;padding:14px 28px;border:1px solid var(--line2);border-radius:999px;transition:.3s;display:inline-flex;align-items:center;gap:12px}
+.show-more::before{content:"";width:8px;height:8px;background:var(--red);border-radius:50%}
+.show-more:hover{border-color:var(--red);background:var(--red);color:#fff;padding-left:36px;padding-right:36px}
+.show-more:hover::before{background:#fff}
+.show-more.expanded::before{background:#fff;box-shadow:inset 0 0 0 2px var(--red)}
+
+.card{position:relative;overflow:hidden;background:var(--bg2);aspect-ratio:4/5;cursor:pointer}
+.card.wide{aspect-ratio:16/9}
+/* natural: image dictates card size, cards align to TOP of row */
+.card.nat{aspect-ratio:auto;background:#0f0f10;border:1px solid rgba(255,255,255,.04);padding:6px;align-self:start}
+.card.nat img{position:relative;width:100%;height:auto;object-fit:contain;transform:scale(1);transition:transform .6s cubic-bezier(.2,.7,.2,1);display:block}
+.card.nat:hover img{transform:scale(1.03)}
+.card img{width:100%;height:100%;object-fit:cover;transform:scale(1.02);transition:transform 1.1s cubic-bezier(.2,.7,.2,1)}
+/* Grid rows: let cards push them; align items to top */
+.grid{grid-auto-rows:auto;align-items:start}
+.card .corners{position:absolute;inset:10px;pointer-events:none;opacity:0;transition:.35s}
+.card .corners span{position:absolute;width:14px;height:14px;border:1.5px solid var(--red)}
+.card .corners span:nth-child(1){top:0;left:0;border-right:0;border-bottom:0}
+.card .corners span:nth-child(2){top:0;right:0;border-left:0;border-bottom:0}
+.card .corners span:nth-child(3){bottom:0;left:0;border-right:0;border-top:0}
+.card .corners span:nth-child(4){bottom:0;right:0;border-left:0;border-top:0}
+.card .ov{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;color:#fff;display:flex;justify-content:space-between;align-items:end;background:linear-gradient(to top,rgba(0,0,0,.75),transparent);opacity:0;transition:.35s;transform:translateY(8px)}
+.card .ov .idx{font-family:var(--font-en);font-size:10px;letter-spacing:.3em;color:var(--red)}
+.card .ov .lbl{font-family:var(--font-en);font-size:11px;letter-spacing:.18em;text-transform:uppercase;text-align:right}
+.card .plus{position:absolute;top:14px;right:14px;width:30px;height:30px;border:1px solid #fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;background:rgba(0,0,0,.4);backdrop-filter:blur(6px);transform:scale(0);transition:.35s}
+.card:hover img{transform:scale(1.08)}
+.card:hover .ov,.card:hover .corners{opacity:1}
+.card:hover .ov{transform:none}
+.card:hover .plus{transform:scale(1);background:var(--red);border-color:var(--red)}
+
+/* tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:40px}
+.tabs button{font-family:var(--font-cn);font-size:14px;padding:10px 18px;border:1px solid var(--line2);color:#fff;border-radius:0;transition:.25s;letter-spacing:.05em}
+.tabs button .en{font-family:var(--font-en);font-size:10px;letter-spacing:.22em;color:var(--mute);margin-left:8px;text-transform:uppercase}
+.tabs button:hover{border-color:#fff}
+.tabs button.active{background:var(--red);border-color:var(--red)}
+.tabs button.active .en{color:rgba(255,255,255,.7)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+.r-1{transition-delay:.08s}.r-2{transition-delay:.16s}.r-3{transition-delay:.24s}
+
+/* ===== contact ===== */
+.contact{padding:140px var(--pad);background:#000;position:relative;overflow:hidden}
+.contact .bg-num{position:absolute;right:-2vw;bottom:-6vw;font-family:var(--font-en);font-weight:900;font-size:clamp(280px,42vw,720px);color:transparent;-webkit-text-stroke:1.5px var(--line2);line-height:1;letter-spacing:-.04em;pointer-events:none}
+.contact h2{font-family:var(--font-cn-s);font-weight:900;font-size:clamp(56px,10vw,180px);line-height:.92;margin-bottom:48px;letter-spacing:-.02em;position:relative;z-index:1}
+.contact h2 b{color:var(--red);font-style:normal}
+.contact h2 .en{display:block;font-family:var(--font-en);font-weight:300;color:var(--mute);font-size:clamp(20px,3vw,40px);letter-spacing:.02em;margin-top:14px}
+.contact .links{border-top:1px solid var(--line);position:relative;z-index:1}
+.contact .row{display:grid;grid-template-columns:200px 1fr;align-items:center;padding:26px 0;border-bottom:1px solid var(--line);transition:.4s;gap:24px}
+.contact .row:hover{padding-left:18px}
+.contact .row:hover .v{color:var(--red)}
+.contact .row .k{font-family:var(--font-en);font-size:11px;letter-spacing:.32em;color:var(--mute);text-transform:uppercase}
+.contact .row .v{font-family:var(--font-en);font-size:clamp(17px,1.6vw,24px);font-weight:500;transition:color .35s}
+.contact .row .go{display:none}
+@media (max-width:600px){.contact .row{grid-template-columns:1fr;gap:6px}}
+.contact footer{margin-top:80px;display:flex;justify-content:space-between;color:var(--mute);font-size:11px;letter-spacing:.18em;flex-wrap:wrap;gap:18px;font-family:var(--font-en);text-transform:uppercase;position:relative;z-index:1;border-top:1px solid var(--line);padding-top:24px}
+
+/* ===== lightbox ===== */
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.97);z-index:1000;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.35s}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:92vw;max-height:86vh;object-fit:contain}
+.lb .lb-close{position:absolute;top:24px;right:24px;border:1px solid var(--line2);color:#fff;width:48px;height:48px;border-radius:50%;font-size:18px}
+.lb .lb-close:hover{background:var(--red);border-color:var(--red)}
+.lb .lb-nav{position:absolute;top:50%;transform:translateY(-50%);border:1px solid var(--line2);color:#fff;width:56px;height:56px;border-radius:50%;font-size:22px}
+.lb .lb-nav:hover{background:var(--red);border-color:var(--red)}
+.lb .lb-prev{left:24px}.lb .lb-next{right:24px}
+.lb .lb-meta{position:absolute;bottom:24px;left:24px;font-family:var(--font-en);font-size:11px;letter-spacing:.3em;color:var(--mute);text-transform:uppercase}
+.lb .lb-meta b{color:var(--red);font-weight:700}
+@media (max-width:600px){.lb .lb-nav{width:42px;height:42px;font-size:16px}.lb .lb-prev{left:8px}.lb .lb-next{right:8px}}
+</style>
+</head>
+<body>
+
+<!-- loader -->
+<div id="loader">
+  <div class="lwrap">
+    <div>
+      <div class="lname">王 玮 · WANG <b>WEI</b></div>
+      <div class="lname" style="opacity:.5;margin-top:8px">PORTFOLIO 2025 / LOADING</div>
+    </div>
+    <div class="lpct" id="lpct">00<span>%</span></div>
+  </div>
+  <div class="lbar"><span id="lbarFill"></span></div>
+</div>
+
+<!-- nav -->
+<nav class="nav">
+  <div class="logo"><div>WANG · WEI<small>JAZZKAI</small></div></div>
+  <div class="links">
+    <a href="#about">About</a>
+    <a href="#reel">Reel</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="menu-btn" id="menuBtn">MENU <b>+</b></button>
+</nav>
+
+<!-- drawer -->
+<div class="drawer" id="drawer">
+  <button class="close" id="drawerClose">✕</button>
+  <a href="#about">关于<small>01 / About</small></a>
+  <a href="#reel">片段<small>02 / Reel</small></a>
+  <a href="#work">作品<small>03 / Work</small></a>
+  <a href="#contact">联系<small>04 / Contact</small></a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-ring"></div>
+    <div class="hero-ring2"></div>
+    <div class="hero-bar"></div>
+    <div class="hero-bar2"></div>
+    <div class="hero-scanline"></div>
+    <div class="hero-shape hs-1"></div>
+    <div class="hero-shape hs-2"></div>
+    <div class="hero-shape hs-3"></div>
+    <div class="hero-shape hs-4"></div>
+    <div class="hero-shape hs-5"></div>
+    <div class="hero-shape hs-6"></div>
+    <div class="hero-shape hs-7"></div>
+    <div class="hero-shape hs-8"></div>
+    <div class="hero-shape hs-9"></div>
+    <div class="hero-shape hs-10"></div>
+    <div class="hero-shape hs-11"></div>
+  </div>
+  <div class="corner tl">© 2025 · Shenzhen<br>jazz-hue / Portfolio</div>
+  <div class="corner tr" id="liveClock">Loading time…</div>
+  <div class="hero-inner">
+    <div class="hero-left">
+    <div class="eyebrow">
+      <span>Portfolio 2025</span>
+      <span>Visual Communication</span>
+      <span id="availTag">Available for hire</span>
+    </div>
+    <h1>
+      王 <span class="slash">/</span> 玮 <span class="alias" data-text="jazzkai">jazzkai</span>
+      <span class="en">Wang Wei — Graphic Designer & AI Artist</span>
+    </h1>
+    </div>
+    <div class="hero-logo">
+      <div class="logo-ring"></div>
+      <div class="logo-ring2"></div>
+      <div class="logo-orbit"><span></span></div>
+      <img class="logo-img" src="images/about/logo.svg" alt="JK · jazzkai">
+    </div>
+  </div>
+  <button class="scroll-cta" id="scrollCta" aria-label="Scroll down">
+    <span class="sc-line"><span class="sc-dot"></span></span>
+    <span class="sc-txt">SCROLL · 向下浏览</span>
+    <span class="sc-arrow">
+      <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+    </span>
+  </button>
+</section>
+
+<!-- marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>视觉传达</span><span class="dot">●</span>
+    <span class="muted">GRAPHIC&nbsp;DESIGN</span><span class="dot">●</span>
+    <span>品牌视觉</span><span class="dot">●</span>
+    <span class="muted">AI&nbsp;ART&nbsp;DIRECTION</span><span class="dot">●</span>
+    <span>插画与摄影</span><span class="dot">●</span>
+    <span class="muted">PHOTOGRAPHY</span><span class="dot">●</span>
+    <span>视觉传达</span><span class="dot">●</span>
+    <span class="muted">GRAPHIC&nbsp;DESIGN</span><span class="dot">●</span>
+    <span>品牌视觉</span><span class="dot">●</span>
+    <span class="muted">AI&nbsp;ART&nbsp;DIRECTION</span><span class="dot">●</span>
+    <span>插画与摄影</span><span class="dot">●</span>
+    <span class="muted">PHOTOGRAPHY</span><span class="dot">●</span>
+  </div>
+</div>
+
+<!-- about -->
+<section class="section about" id="about">
+  <div class="nbox"><b>01</b>ABOUT</div>
+  <div>
+    <div class="label reveal">— PROFILE / 自我介绍</div>
+    <h2 class="reveal">设计，是让<br>生活注入<br><b>无限可能</b>。</h2>
+    <p class="reveal r-1" id="introTxt">加载中…</p>
+    <div class="skills reveal r-2">
+      <div class="slabel">— <b>TOOLKIT</b> · 工具栈 / 设计 + AI 协同</div>
+      <div class="chips">
+        <span class="chip accent">Photoshop</span>
+        <span class="chip">Illustrator</span>
+        <span class="chip">Midjourney</span>
+        <span class="chip">ComfyUI</span>
+        <span class="chip">Nano Banana</span>
+        <span class="chip">Runway</span>
+        <span class="chip">Blender</span>
+      </div>
+      <div class="meta">
+        <div><b>视觉传达</b>Visual Comm.</div>
+        <div><b>品牌视觉</b>Branding</div>
+        <div><b>AI 工作流</b>AI Workflow</div>
+        <a href="#contact" class="meta-link"><b>可联系 <span class="arr">↓</span></b>Available now</a>
+      </div>
+    </div>
+  </div>
+  <div class="avatar-wrap reveal r-1">
+    <span class="frame-tr"></span>
+    <span class="frame-bl"></span>
+    <span class="frame-br"></span>
+    <img id="avatarImg" alt="王玮 Wang Wei" loading="lazy">
+    <div class="label-bottom">WANG WEI · 2025</div>
+  </div>
+</section>
+
+<!-- video -->
+<section class="video-block" id="reel">
+  <div class="shead">
+    <div class="ttl reveal"><span class="en">AI Product Reel · 动态影像</span>动态影像</div>
+    <div class="nbox reveal r-1"><b>02</b>REEL · VIDEO</div>
+  </div>
+  <div class="reel-wrap reveal">
+    <button class="reel-nav reel-prev" id="reelPrev" aria-label="上一个视频">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="reel-nav reel-next" id="reelNext" aria-label="下一个视频">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+    <div class="reel-track" id="reelTrack"></div>
+  </div>
+  <div class="reel-dots" id="reelDots"></div>
+</section>
+
+<main id="work"></main>
+
+<!-- contact -->
+<section class="contact" id="contact">
+  <div class="bg-num">2025</div>
+  <h2 class="reveal">让我们<br><b>聊聊</b>。<span class="en">Let's create something good together.</span></h2>
+  <div class="links reveal r-1" id="contactLinks"></div>
+  <footer>
+    <div>© 2025 王玮 WANG WEI · MADE IN SHENZHEN</div>
+    <div>PORTFOLIO V1.0 · 兰州城市学院 · 视觉传达</div>
+  </footer>
+</section>
+
+<!-- back to top -->
+<button class="back-top" id="backTop" aria-label="回到顶部 Back to top">
+  <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<!-- lightbox -->
+<div class="lb" id="lb">
+  <button class="lb-close" id="lbClose">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-nav lb-next" id="lbNext">›</button>
+  <div class="lb-meta" id="lbMeta"></div>
+</div>
+
+<script>
+/* embedded data — no fetch needed */
+window.__data = {"profile": {"name_cn": "王玮", "name_en": "Wang Wei", "alias": "jazzkai", "title_cn": "平面设计师 / 视觉传达", "title_en": "Graphic Designer & AI Artist", "school": "兰州城市学院 视觉传达设计专业", "intro_cn": "您好，我是王玮（jazzkai），一名专注于平面设计的设计师。熟练掌握 Photoshop、Illustrator 等设计软件，熟悉运用各种 AI 工具：MJ、ComfyUI、Nano Banana、Runway，具备扎实的创意设计和品牌视觉表达能力。热爱标志设计、摄影与探索新鲜事物，相信设计可以为生活注入无限可能。", "intro_en": "Hi, I'm Wang Wei (jazzkai) — a graphic designer focused on visual communication. Proficient in Photoshop, Illustrator and AI tools (Midjourney, ComfyUI, Nano Banana, Runway).", "email": "wean1234580@gmail.com", "wechat": "15609344927", "qq": "2298833893", "phone": "15609344927", "location_cn": "深圳，中国", "location_en": "Shenzhen, China", "avatar": "images/about/avatar.webp"}, "video": {"placeholder": "images/about/video-cover.webp", "src": ""}, "sections": [{"slug": "posters", "title_cn": "海报设计", "title_en": "Poster Design", "kind": "main", "cols": 3, "items": [{"thumb": "images/posters/thumb/001.webp", "full": "images/posters/full/001.webp", "src_name": "Image 326.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/002.webp", "full": "images/posters/full/002.webp", "src_name": "Image 328.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/003.webp", "full": "images/posters/full/003.webp", "src_name": "Image 330.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/004.webp", "full": "images/posters/full/004.webp", "src_name": "Image 331.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/005.webp", "full": "images/posters/full/005.webp", "src_name": "Image 336.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/006.webp", "full": "images/posters/full/006.webp", "src_name": "Image 338.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/007.webp", "full": "images/posters/full/007.webp", "src_name": "Image 340.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/008.webp", "full": "images/posters/full/008.webp", "src_name": "Image 341.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/009.webp", "full": "images/posters/full/009.webp", "src_name": "Image 349.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/010.webp", "full": "images/posters/full/010.webp", "src_name": "Image 351.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/011.webp", "full": "images/posters/full/011.webp", "src_name": "Image 352.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/012.webp", "full": "images/posters/full/012.webp", "src_name": "Image 354.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/014.webp", "full": "images/posters/full/014.webp", "src_name": "Image 357.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/015.webp", "full": "images/posters/full/015.webp", "src_name": "Image 360.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/016.webp", "full": "images/posters/full/016.webp", "src_name": "Image 363.png", "w": 667, "h": 1000}, {"thumb": "images/posters/thumb/017.webp", "full": "images/posters/full/017.webp", "src_name": "fluxxin2.jpg", "w": 800, "h": 1000}, {"thumb": "images/posters/thumb/018.webp", "full": "images/posters/full/018.webp", "src_name": "shijuebannerxin2shouiiban.jpg", "w": 771, "h": 1000}, {"thumb": "images/posters/thumb/019.webp", "full": "images/posters/full/019.webp", "src_name": "shujuebannerxin2shoujib.jpg", "w": 771, "h": 1000}], "groups": []}, {"slug": "aplus", "title_cn": "A+ 设计", "title_en": "A+ Design", "kind": "main", "cols": 4, "items": [{"thumb": "images/aplus/thumb/001.webp", "full": "images/aplus/full/001.webp", "src_name": "1.jpg", "w": 296, "h": 1000}, {"thumb": "images/aplus/thumb/002.webp", "full": "images/aplus/full/002.webp", "src_name": "2.jpg", "w": 296, "h": 1000}, {"thumb": "images/aplus/thumb/003.webp", "full": "images/aplus/full/003.webp", "src_name": "3.jpg", "w": 297, "h": 1000}, {"thumb": "images/aplus/thumb/004.webp", "full": "images/aplus/full/004.webp", "src_name": "4.jpg", "w": 296, "h": 1000}], "groups": []}, {"slug": "products", "title_cn": "主图设计", "title_en": "Product Design", "kind": "main", "cols": 4, "items": [{"thumb": "images/products/thumb/001.webp", "full": "images/products/full/001.webp", "src_name": "1.jpg", "w": 800, "h": 1000}, {"thumb": "images/products/thumb/002.webp", "full": "images/products/full/002.webp", "src_name": "2.jpg", "w": 800, "h": 1000}, {"thumb": "images/products/thumb/003.webp", "full": "images/products/full/003.webp", "src_name": "3.jpg", "w": 800, "h": 1000}, {"thumb": "images/products/thumb/004.webp", "full": "images/products/full/004.webp", "src_name": "4.jpg", "w": 800, "h": 1000}, {"thumb": "images/products/thumb/005.webp", "full": "images/products/full/005.webp", "src_name": "5.jpg", "w": 800, "h": 1000}, {"thumb": "images/products/thumb/006.webp", "full": "images/products/full/006.webp", "src_name": "6.jpg", "w": 800, "h": 1000}, {"thumb": "images/products/thumb/007.webp", "full": "images/products/full/007.webp", "src_name": "7.png", "w": 798, "h": 1000}, {"thumb": "images/products/thumb/008.webp", "full": "images/products/full/008.webp", "src_name": "8.png", "w": 797, "h": 1000}, {"thumb": "images/products/thumb/009.webp", "full": "images/products/full/009.webp", "src_name": "9.png", "w": 1000, "h": 1000}, {"thumb": "images/products/thumb/010.webp", "full": "images/products/full/010.webp", "src_name": "10.png", "w": 1000, "h": 1000}, {"thumb": "images/products/thumb/011.webp", "full": "images/products/full/011.webp", "src_name": "11.png", "w": 1000, "h": 1000}, {"thumb": "images/products/thumb/012.webp", "full": "images/products/full/012.webp", "src_name": "12.png", "w": 1000, "h": 1000}, {"thumb": "images/products/thumb/013.webp", "full": "images/products/full/013.webp", "src_name": "13.png", "w": 1000, "h": 1000}, {"thumb": "images/products/thumb/014.webp", "full": "images/products/full/014.webp", "src_name": "14.png", "w": 1000, "h": 1000}, {"thumb": "images/products/thumb/015.webp", "full": "images/products/full/015.webp", "src_name": "15.png", "w": 1000, "h": 1000}, {"thumb": "images/products/thumb/016.webp", "full": "images/products/full/016.webp", "src_name": "16.png", "w": 1000, "h": 1000}], "groups": []}, {"slug": "h5", "title_cn": "H5 设计", "title_en": "H5 Design", "kind": "main", "cols": 5, "items": [{"thumb": "images/h5/thumb/001.webp", "full": "images/h5/full/001.webp", "src_name": "CLUQ9571.jpg", "w": 462, "h": 1000}, {"thumb": "images/h5/thumb/002.webp", "full": "images/h5/full/002.webp", "src_name": "DLEK9639.jpg", "w": 462, "h": 1000}, {"thumb": "images/h5/thumb/003.webp", "full": "images/h5/full/003.webp", "src_name": "DUMS3760.jpg", "w": 467, "h": 1000}, {"thumb": "images/h5/thumb/004.webp", "full": "images/h5/full/004.webp", "src_name": "HZYB6740.jpg", "w": 466, "h": 1000}, {"thumb": "images/h5/thumb/005.webp", "full": "images/h5/full/005.webp", "src_name": "TLXP2764.jpg", "w": 462, "h": 1000}], "groups": []}, {"slug": "banners", "title_cn": "Banner 设计", "title_en": "Banner Design", "kind": "main", "cols": 3, "items": [{"thumb": "images/banners/thumb/001.webp", "full": "images/banners/full/001.webp", "src_name": "Image 424.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/002.webp", "full": "images/banners/full/002.webp", "src_name": "Image 425.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/003.webp", "full": "images/banners/full/003.webp", "src_name": "Image 426.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/004.webp", "full": "images/banners/full/004.webp", "src_name": "Image 428.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/005.webp", "full": "images/banners/full/005.webp", "src_name": "Image 429.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/006.webp", "full": "images/banners/full/006.webp", "src_name": "Image 430.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/007.webp", "full": "images/banners/full/007.webp", "src_name": "Image 431.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/008.webp", "full": "images/banners/full/008.webp", "src_name": "Image 432.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/009.webp", "full": "images/banners/full/009.webp", "src_name": "Image 433.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/010.webp", "full": "images/banners/full/010.webp", "src_name": "Image 434.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/011.webp", "full": "images/banners/full/011.webp", "src_name": "Image 435.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/012.webp", "full": "images/banners/full/012.webp", "src_name": "Image 436.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/013.webp", "full": "images/banners/full/013.webp", "src_name": "Image 437.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/014.webp", "full": "images/banners/full/014.webp", "src_name": "Image 439.png", "w": 1000, "h": 563}, {"thumb": "images/banners/thumb/015.webp", "full": "images/banners/full/015.webp", "src_name": "MYIC4948.jpg", "w": 1000, "h": 438}, {"thumb": "images/banners/thumb/016.webp", "full": "images/banners/full/016.webp", "src_name": "NSMO4255.jpg", "w": 915, "h": 418}, {"thumb": "images/banners/thumb/017.webp", "full": "images/banners/full/017.webp", "src_name": "鞋子.jpg", "w": 1000, "h": 507}], "groups": []}, {"slug": "webdesign", "title_cn": "网页设计", "title_en": "Web Design", "kind": "main", "cols": 5, "items": [{"thumb": "images/webdesign/thumb/001.webp", "full": "images/webdesign/full/001.webp", "src_name": "01.png", "w": 355, "h": 1000}, {"thumb": "images/webdesign/thumb/002.webp", "full": "images/webdesign/full/002.webp", "src_name": "02.png", "w": 355, "h": 1000}, {"thumb": "images/webdesign/thumb/003.webp", "full": "images/webdesign/full/003.webp", "src_name": "03.png", "w": 355, "h": 1000}, {"thumb": "images/webdesign/thumb/004.webp", "full": "images/webdesign/full/004.webp", "src_name": "04.png", "w": 355, "h": 1000}, {"thumb": "images/webdesign/thumb/005.webp", "full": "images/webdesign/full/005.webp", "src_name": "05.png", "w": 676, "h": 1000}], "groups": []}, {"slug": "album", "title_cn": "画册", "title_en": "Album", "kind": "main", "cols": 3, "items": [{"thumb": "images/album/thumb/001.webp", "full": "images/album/full/001.webp", "src_name": "2.0_01封面.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/002.webp", "full": "images/album/full/002.webp", "src_name": "2.0_02.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/003.webp", "full": "images/album/full/003.webp", "src_name": "2.0-03.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/004.webp", "full": "images/album/full/004.webp", "src_name": "2.0-04.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/005.webp", "full": "images/album/full/005.webp", "src_name": "2.0-05.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/006.webp", "full": "images/album/full/006.webp", "src_name": "2.0-06.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/007.webp", "full": "images/album/full/007.webp", "src_name": "2.0-07.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/008.webp", "full": "images/album/full/008.webp", "src_name": "2.0-08.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/009.webp", "full": "images/album/full/009.webp", "src_name": "2.0-09.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/010.webp", "full": "images/album/full/010.webp", "src_name": "2.0-10.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/011.webp", "full": "images/album/full/011.webp", "src_name": "2.0-11.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/012.webp", "full": "images/album/full/012.webp", "src_name": "2.0-12.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/013.webp", "full": "images/album/full/013.webp", "src_name": "2.0-13.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/014.webp", "full": "images/album/full/014.webp", "src_name": "2.0-14.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/015.webp", "full": "images/album/full/015.webp", "src_name": "2.0-15.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/016.webp", "full": "images/album/full/016.webp", "src_name": "2.0-16.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/017.webp", "full": "images/album/full/017.webp", "src_name": "2.0-17.png", "w": 1000, "h": 707}, {"thumb": "images/album/thumb/018.webp", "full": "images/album/full/018.webp", "src_name": "2.0-18.png", "w": 1000, "h": 707}], "groups": []}, {"slug": "illustration", "title_cn": "插画设计", "title_en": "Illustration", "kind": "main", "cols": 3, "items": [{"thumb": "images/illustration/thumb/001.webp", "full": "images/illustration/full/001.webp", "src_name": "3.1.png", "w": 707, "h": 1000}, {"thumb": "images/illustration/thumb/002.webp", "full": "images/illustration/full/002.webp", "src_name": "5.1.png", "w": 707, "h": 1000}, {"thumb": "images/illustration/thumb/003.webp", "full": "images/illustration/full/003.webp", "src_name": "8.1.png", "w": 707, "h": 1000}, {"thumb": "images/illustration/thumb/004.webp", "full": "images/illustration/full/004.webp", "src_name": "Image 234.png", "w": 549, "h": 1000}, {"thumb": "images/illustration/thumb/005.webp", "full": "images/illustration/full/005.webp", "src_name": "Image 249.jpg", "w": 549, "h": 1000}, {"thumb": "images/illustration/thumb/006.webp", "full": "images/illustration/full/006.webp", "src_name": "Image 259.png", "w": 549, "h": 1000}, {"thumb": "images/illustration/thumb/008.webp", "full": "images/illustration/full/008.webp", "src_name": "Jinx.jpg", "w": 1000, "h": 560}, {"thumb": "images/illustration/thumb/009.webp", "full": "images/illustration/full/009.webp", "src_name": "lpatterson_League_of_Legends_style_big_perspective_strong_story_aa70e124-1822-4f10-9b8a-8f0dd0de9d08.png", "w": 1000, "h": 560}], "groups": []}, {"slug": "ai", "title_cn": "AI 设计", "title_en": "AI Design", "kind": "ai", "cols": 3, "items": [], "groups": [{"slug": "portraits", "title_cn": "人像", "title_en": "Portraits", "items": [{"thumb": "images/ai/portraits/thumb/001.webp", "full": "images/ai/portraits/full/001.webp", "src_name": "jazzk4636_A_model_wearing_black_pointed_shoes_a_brown_knitted_s_0faf3132-cd2e-43d5-a2bd-e36080e3ad50.png", "w": 800, "h": 1000}, {"thumb": "images/ai/portraits/thumb/002.webp", "full": "images/ai/portraits/full/002.webp", "src_name": "jazzk4636_A_photograph_of_an_elegant_woman_with_sleek_straight__cd3f920c-6fec-48e5-ad1e-a92ceae93db2.png", "w": 667, "h": 1000}, {"thumb": "images/ai/portraits/thumb/003.webp", "full": "images/ai/portraits/full/003.webp", "src_name": "jazzk4636_A_portrait_of_an_androgynous_woman_with_pink_eye_shad_78d8c984-8ced-439c-bbec-3bf0f5520764.png", "w": 800, "h": 1000}, {"thumb": "images/ai/portraits/thumb/004.webp", "full": "images/ai/portraits/full/004.webp", "src_name": "jazzk4636_Black_and_white_portrait_of_an_elegant_woman_with_blo_40e3fd8a-eee3-4169-905f-bfa37984c8be.png", "w": 667, "h": 1000}, {"thumb": "images/ai/portraits/thumb/005.webp", "full": "images/ai/portraits/full/005.webp", "src_name": "jazzk4636_Close-up_portrait_of_a_model_with_curly_hair_wearing__176d8a00-f80c-4629-93ba-0446e7aa1ee6.png", "w": 667, "h": 1000}, {"thumb": "images/ai/portraits/thumb/006.webp", "full": "images/ai/portraits/full/006.webp", "src_name": "jazzk4636_Low-angle_shot_Asian_girl_with_messy_braid_back_top_l_647e1652-e596-4ceb-b804-a3c401e69f73.png", "w": 667, "h": 1000}]}, {"slug": "personal", "title_cn": "个人风格", "title_en": "Personal Style", "items": [{"thumb": "images/ai/personal/thumb/001.webp", "full": "images/ai/personal/full/001.webp", "src_name": "jazzk4636_A_medieval_knight_running_at_full_speed_with_a_lanc_981f7600-b006-490d-a990-8d919cde703e_0.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/002.webp", "full": "images/ai/personal/full/002.webp", "src_name": "jazzk4636_Extreme_low-angle_upward_shot_35mm_standard_lens_co_58251163-299c-4686-b3cb-02931631a23e_3.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/003.webp", "full": "images/ai/personal/full/003.webp", "src_name": "jazzk4636_Knight_in_gothic_plate_armor_blocking_with_shield_pix_0dbd220b-16a8-4a85-b1b6-afccc824bd1e.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/004.webp", "full": "images/ai/personal/full/004.webp", "src_name": "jazzk4636_The_dismounted_knight_kneels_in_his_bloodstained_ta_8df6c9fe-38da-495a-9286-0c18c8eac5b9_3.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/005.webp", "full": "images/ai/personal/full/005.webp", "src_name": "jazzk4636_This_is_a_highly_detailed_and_dramatic_portrait_of_Gu_0ea955de-d99f-4617-884b-420d20f61908.png", "w": 667, "h": 1000}, {"thumb": "images/ai/personal/thumb/006.webp", "full": "images/ai/personal/full/006.webp", "src_name": "jazzk4636_fractured_cubist_swordsman_slicing_through_prismatic__94b44042-9a65-4c19-ab4b-1d60fbcedc64.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/007.webp", "full": "images/ai/personal/full/007.webp", "src_name": "jazzk4636_low_lunge_thrust_with_parallel_blades_strike_path_war_8a6f31b1-cf3c-4323-9c4e-6fdafe71dff8.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/008.webp", "full": "images/ai/personal/full/008.webp", "src_name": "jazzk4636_mercury_human_figure_melting_into_ocean_vortex_liquid_560e5f63-de40-48e7-84d5-c224d92d8b6b.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/009.webp", "full": "images/ai/personal/full/009.webp", "src_name": "jazzk4636_quantum_wings_piercing_through_binary_code_prison_hol_8024464c-7e97-43e7-a359-8defe1bcf18c.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/010.webp", "full": "images/ai/personal/full/010.webp", "src_name": "jazzk4636_self-reflection_in_broken_mirror1.5_1950s_Chicago_s_c1dd19f7-70f5-4b87-92a1-b00248aa4d02_1.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/011.webp", "full": "images/ai/personal/full/011.webp", "src_name": "jazzk4636_spinning_blades_entangling_observer_effect_sword_trai_22025913-0cdc-439a-933b-c70de74dca63.png", "w": 560, "h": 1000}, {"thumb": "images/ai/personal/thumb/012.webp", "full": "images/ai/personal/full/012.webp", "src_name": "jazzk4636_spinning_blades_entangling_observer_effect_sword_trai_41da0531-cc29-4003-ba30-73e409d5718a.png", "w": 560, "h": 1000}]}, {"slug": "ai-product", "title_cn": "AI 产品", "title_en": "AI Product", "items": [{"thumb": "images/ai/ai-product/thumb/001.webp", "full": "images/ai/ai-product/full/001.webp", "src_name": "jazzk4636_A_highly_realistic_product_photo_showcases_a_futurist_601343d3-ae9a-4745-9ee5-c35d70358824.png", "w": 800, "h": 1000}, {"thumb": "images/ai/ai-product/thumb/002.webp", "full": "images/ai/ai-product/full/002.webp", "src_name": "jazzk4636_A_hyper-realistic_product_render_of_a_3D-printed_avan_9713904a-f28a-4be9-a1a9-88aab216025f.png", "w": 800, "h": 1000}, {"thumb": "images/ai/ai-product/thumb/003.webp", "full": "images/ai/ai-product/full/003.webp", "src_name": "jazzk4636_A_pair_of_highly_conceptual_3D-printed_luxury_sneaker_83607335-ebf9-49f6-a6e3-09c6ca6dcb61.png", "w": 800, "h": 1000}, {"thumb": "images/ai/ai-product/thumb/004.webp", "full": "images/ai/ai-product/full/004.webp", "src_name": "jazzk4636_A_visually_striking_avant-garde_product_photograph_fe_a8ffb45a-5d45-4518-911f-188b3a455a79.png", "w": 800, "h": 1000}, {"thumb": "images/ai/ai-product/thumb/005.webp", "full": "images/ai/ai-product/full/005.webp", "src_name": "jazzk4636_Hyper-realistic_product_render_of_the_Scoria_Ember_sn_eafda3fd-0af5-4ef8-b41f-780770befdde.png", "w": 753, "h": 1000}]}, {"slug": "greek-gods", "title_cn": "古希腊诸神", "title_en": "Greek Gods", "items": [{"thumb": "images/ai/greek-gods/thumb/001.webp", "full": "images/ai/greek-gods/full/001.webp", "src_name": "资源 44.png", "w": 557, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/002.webp", "full": "images/ai/greek-gods/full/002.webp", "src_name": "资源 45.png", "w": 561, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/003.webp", "full": "images/ai/greek-gods/full/003.webp", "src_name": "资源 46.png", "w": 561, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/004.webp", "full": "images/ai/greek-gods/full/004.webp", "src_name": "资源 47.png", "w": 560, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/005.webp", "full": "images/ai/greek-gods/full/005.webp", "src_name": "资源 48.png", "w": 559, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/006.webp", "full": "images/ai/greek-gods/full/006.webp", "src_name": "资源 49.png", "w": 560, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/007.webp", "full": "images/ai/greek-gods/full/007.webp", "src_name": "资源 50.png", "w": 561, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/008.webp", "full": "images/ai/greek-gods/full/008.webp", "src_name": "资源 51.png", "w": 553, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/009.webp", "full": "images/ai/greek-gods/full/009.webp", "src_name": "资源 52.png", "w": 561, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/010.webp", "full": "images/ai/greek-gods/full/010.webp", "src_name": "资源 53.png", "w": 561, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/011.webp", "full": "images/ai/greek-gods/full/011.webp", "src_name": "资源 54.png", "w": 561, "h": 1000}, {"thumb": "images/ai/greek-gods/thumb/012.webp", "full": "images/ai/greek-gods/full/012.webp", "src_name": "资源 55.png", "w": 561, "h": 1000}]}, {"slug": "marvel", "title_cn": "漫威", "title_en": "Marvel", "items": [{"thumb": "images/ai/marvel/thumb/001.webp", "full": "images/ai/marvel/full/001.webp", "src_name": "jazzk4636_Black_Panthers_vibranium_shockwave_shatters_the_Golde_54df5d83-bfc6-486e-84bf-e4f0a8940fa6.png", "w": 1000, "h": 560}, {"thumb": "images/ai/marvel/thumb/002.webp", "full": "images/ai/marvel/full/002.webp", "src_name": "jazzk4636_Captain_America_is_on_the_roof_of_a_bus_at_night_thro_d3a8a1c9-7487-467b-bd09-bebfa3e2ee12.png", "w": 1000, "h": 560}, {"thumb": "images/ai/marvel/thumb/003.webp", "full": "images/ai/marvel/full/003.webp", "src_name": "jazzk4636_Captain_Marvels_cosmic_energy_burst_electric_blue_sui_b97aa5a7-63c2-4d32-afab-75375f0d3be3.png", "w": 1000, "h": 560}, {"thumb": "images/ai/marvel/thumb/004.webp", "full": "images/ai/marvel/full/004.webp", "src_name": "jazzk4636_Close-up_of_Wolverine_running_wild_his_adamantium_cla_563f8dfb-2e56-4b11-b329-7474d6786fce.png", "w": 1000, "h": 560}, {"thumb": "images/ai/marvel/thumb/005.webp", "full": "images/ai/marvel/full/005.webp", "src_name": "jazzk4636_Doctor_Strange_meditates_and_casts_a_multiverse_spell_ad8f8025-2d75-4085-a431-a98a310e2186.png", "w": 1000, "h": 560}, {"thumb": "images/ai/marvel/thumb/006.webp", "full": "images/ai/marvel/full/006.webp", "src_name": "jazzk4636_Iron_Mark_VII_armored_landing_gold_filigree_detail_on_e4aa09ed-02f6-42f4-9872-800c60c220d6.png", "w": 1000, "h": 560}, {"thumb": "images/ai/marvel/thumb/007.webp", "full": "images/ai/marvel/full/007.webp", "src_name": "jazzk4636_Jean_Grey_engulfed_in_cosmic_fire_Phoenix_wings_spa_06798840-e823-40e8-a38b-5da55a503736_3.png", "w": 1000, "h": 560}, {"thumb": "images/ai/marvel/thumb/008.webp", "full": "images/ai/marvel/full/008.webp", "src_name": "jazzk4636_Scarlet_witch_unleashing_chaos_magic_on_mountain_peak_c2594ffd-b2d0-4730-bdd5-b4dacb5f3638.png", "w": 1000, "h": 560}, {"thumb": "images/ai/marvel/thumb/009.webp", "full": "images/ai/marvel/full/009.webp", "src_name": "jazzk4636_The_man_in_the_fire_controls_the_flames_in_the_city_t_ad08bd24-511a-42de-b2d1-df5f041a9efe.png", "w": 1000, "h": 560}]}]}, {"slug": "photography", "title_cn": "摄影作品", "title_en": "Photography", "kind": "ai", "cols": 3, "items": [], "groups": [{"slug": "osuga-product", "title_cn": "大人糖产品", "title_en": "OSUGA Product", "items": [{"thumb": "images/photography/osuga-product/thumb/001.webp", "full": "images/photography/osuga-product/full/001.webp", "src_name": "1.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/002.webp", "full": "images/photography/osuga-product/full/002.webp", "src_name": "2.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/003.webp", "full": "images/photography/osuga-product/full/003.webp", "src_name": "3.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/004.webp", "full": "images/photography/osuga-product/full/004.webp", "src_name": "4.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/005.webp", "full": "images/photography/osuga-product/full/005.webp", "src_name": "5.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/006.webp", "full": "images/photography/osuga-product/full/006.webp", "src_name": "6.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/007.webp", "full": "images/photography/osuga-product/full/007.webp", "src_name": "7.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/008.webp", "full": "images/photography/osuga-product/full/008.webp", "src_name": "8.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/009.webp", "full": "images/photography/osuga-product/full/009.webp", "src_name": "9.png", "w": 746, "h": 1000}, {"thumb": "images/photography/osuga-product/thumb/010.webp", "full": "images/photography/osuga-product/full/010.webp", "src_name": "10.png", "w": 746, "h": 1000}]}, {"slug": "portrait", "title_cn": "人像摄影", "title_en": "Portrait", "items": [{"thumb": "images/photography/portrait/thumb/001.webp", "full": "images/photography/portrait/full/001.webp", "src_name": "1.png", "w": 746, "h": 1000}, {"thumb": "images/photography/portrait/thumb/002.webp", "full": "images/photography/portrait/full/002.webp", "src_name": "2.png", "w": 746, "h": 1000}, {"thumb": "images/photography/portrait/thumb/003.webp", "full": "images/photography/portrait/full/003.webp", "src_name": "3.png", "w": 670, "h": 1000}, {"thumb": "images/photography/portrait/thumb/004.webp", "full": "images/photography/portrait/full/004.webp", "src_name": "4.png", "w": 670, "h": 1000}, {"thumb": "images/photography/portrait/thumb/005.webp", "full": "images/photography/portrait/full/005.webp", "src_name": "5.png", "w": 746, "h": 1000}, {"thumb": "images/photography/portrait/thumb/006.webp", "full": "images/photography/portrait/full/006.webp", "src_name": "6.png", "w": 746, "h": 1000}, {"thumb": "images/photography/portrait/thumb/007.webp", "full": "images/photography/portrait/full/007.webp", "src_name": "7.png", "w": 670, "h": 1000}, {"thumb": "images/photography/portrait/thumb/008.webp", "full": "images/photography/portrait/full/008.webp", "src_name": "8.png", "w": 746, "h": 1000}, {"thumb": "images/photography/portrait/thumb/009.webp", "full": "images/photography/portrait/full/009.webp", "src_name": "9.png", "w": 746, "h": 1000}, {"thumb": "images/photography/portrait/thumb/010.webp", "full": "images/photography/portrait/full/010.webp", "src_name": "10.png", "w": 670, "h": 1000}]}, {"slug": "personal", "title_cn": "个人拍摄", "title_en": "Personal", "items": [{"thumb": "images/photography/personal/thumb/001.webp", "full": "images/photography/personal/full/001.webp", "src_name": "1.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/002.webp", "full": "images/photography/personal/full/002.webp", "src_name": "2.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/003.webp", "full": "images/photography/personal/full/003.webp", "src_name": "3.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/004.webp", "full": "images/photography/personal/full/004.webp", "src_name": "4.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/005.webp", "full": "images/photography/personal/full/005.webp", "src_name": "5.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/006.webp", "full": "images/photography/personal/full/006.webp", "src_name": "6.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/007.webp", "full": "images/photography/personal/full/007.webp", "src_name": "7.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/008.webp", "full": "images/photography/personal/full/008.webp", "src_name": "8.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/009.webp", "full": "images/photography/personal/full/009.webp", "src_name": "9.JPG", "w": 1000, "h": 1000}, {"thumb": "images/photography/personal/thumb/010.webp", "full": "images/photography/personal/full/010.webp", "src_name": "10.JPG", "w": 1000, "h": 1000}]}, {"slug": "shoes", "title_cn": "鞋子拍摄", "title_en": "Shoes", "items": [{"thumb": "images/photography/shoes/thumb/001.webp", "full": "images/photography/shoes/full/001.webp", "src_name": "1.jpeg", "w": 1000, "h": 1000}, {"thumb": "images/photography/shoes/thumb/002.webp", "full": "images/photography/shoes/full/002.webp", "src_name": "2.jpeg", "w": 1000, "h": 1000}, {"thumb": "images/photography/shoes/thumb/003.webp", "full": "images/photography/shoes/full/003.webp", "src_name": "3.jpeg", "w": 1000, "h": 1000}, {"thumb": "images/photography/shoes/thumb/004.webp", "full": "images/photography/shoes/full/004.webp", "src_name": "4.jpeg", "w": 1000, "h": 1000}, {"thumb": "images/photography/shoes/thumb/005.webp", "full": "images/photography/shoes/full/005.webp", "src_name": "5.jpeg", "w": 1000, "h": 1000}, {"thumb": "images/photography/shoes/thumb/006.webp", "full": "images/photography/shoes/full/006.webp", "src_name": "6.jpeg", "w": 746, "h": 1000}, {"thumb": "images/photography/shoes/thumb/007.webp", "full": "images/photography/shoes/full/007.webp", "src_name": "7.jpeg", "w": 746, "h": 1000}, {"thumb": "images/photography/shoes/thumb/008.webp", "full": "images/photography/shoes/full/008.webp", "src_name": "8.jpeg", "w": 746, "h": 1000}, {"thumb": "images/photography/shoes/thumb/009.webp", "full": "images/photography/shoes/full/009.webp", "src_name": "9.png", "w": 558, "h": 1000}, {"thumb": "images/photography/shoes/thumb/010.webp", "full": "images/photography/shoes/full/010.webp", "src_name": "10.jpeg", "w": 746, "h": 1000}]}]}]};
+
+/* ===== loader ===== */
+const loader=document.getElementById('loader'), lpct=document.getElementById('lpct'), lbarFill=document.getElementById('lbarFill');
+let lp=0; const lt=setInterval(()=>{
+  lp=Math.min(100, lp + Math.random()*16 + 4);
+  lpct.innerHTML = String(Math.floor(lp)).padStart(2,'0')+'<span>%</span>';
+  document.querySelector('#loader .lbar').style.setProperty('--p', lp/100);
+  document.querySelector('#loader .lbar').firstElementChild?.style?.setProperty?.('transform', `scaleX(${lp/100})`);
+  // direct style on the ::after via parent override
+  const bar=document.querySelector('#loader .lbar');
+  bar.style.background='linear-gradient(90deg, var(--red) '+lp+'%, rgba(255,255,255,.10) '+lp+'%)';
+  if(lp>=100){clearInterval(lt)}
+}, 90);
+window.addEventListener('load', ()=>{ setTimeout(()=>loader.classList.add('gone'), 1500); });
+
+/* ===== drawer ===== */
+const drawer=document.getElementById('drawer');
+document.getElementById('menuBtn').onclick=()=>drawer.classList.add('open');
+document.getElementById('drawerClose').onclick=()=>drawer.classList.remove('open');
+drawer.querySelectorAll('a').forEach(a=>a.onclick=()=>drawer.classList.remove('open'));
+
+/* ===== hero clock ===== */
+function updateClock(){
+  const opts={timeZone:'Asia/Shanghai',hour:'2-digit',minute:'2-digit',hour12:false};
+  document.getElementById('liveClock').innerHTML='Shenzhen / CN<br>'+new Intl.DateTimeFormat('en-GB',opts).format(new Date());
+}
+updateClock(); setInterval(updateClock,30000);
+
+/* ===== reveal observer ===== */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+function bindReveal(scope){(scope||document).querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el))}
+bindReveal();
+
+/* back to top + scroll cta */
+const backTop=document.getElementById('backTop');
+const scrollCta=document.getElementById('scrollCta');
+function onScroll(){
+  if(window.scrollY > 600) backTop.classList.add('show');
+  else backTop.classList.remove('show');
+}
+addEventListener('scroll', onScroll, {passive:true}); onScroll();
+backTop.onclick=()=>window.scrollTo({top:0, behavior:'smooth'});
+if(scrollCta) scrollCta.onclick=()=>document.getElementById('about')?.scrollIntoView({behavior:'smooth', block:'start'});
+
+/* parallax for hero shapes — light, throttled */
+const heroShapes=document.querySelectorAll('.hero-shape');
+let pmx=0,pmy=0,tmx=0,tmy=0;
+addEventListener('mousemove',e=>{tmx=(e.clientX/innerWidth-.5);tmy=(e.clientY/innerHeight-.5)},{passive:true});
+function plx(){pmx+=(tmx-pmx)*.06;pmy+=(tmy-pmy)*.06;heroShapes.forEach((el,i)=>{const f=(i%3+1)*8;el.style.translate=`${pmx*f}px ${pmy*f}px`});requestAnimationFrame(plx)}plx();
+
+/* ===== lightbox ===== */
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg'),lbMeta=document.getElementById('lbMeta');
+let lbList=[],lbIdx=0;
+function openLb(items,i){lbList=items;lbIdx=i;showLb();lb.classList.add('open');document.body.style.overflow='hidden'}
+function closeLb(){lb.classList.remove('open');document.body.style.overflow=''}
+function showLb(){const it=lbList[lbIdx];lbImg.src=it.full;lbMeta.innerHTML=`<b>${String(lbIdx+1).padStart(2,'0')}</b> / ${String(lbList.length).padStart(2,'0')} · ${it._section||''}`}
+document.getElementById('lbClose').onclick=closeLb;
+document.getElementById('lbPrev').onclick=()=>{lbIdx=(lbIdx-1+lbList.length)%lbList.length;showLb()};
+document.getElementById('lbNext').onclick=()=>{lbIdx=(lbIdx+1)%lbList.length;showLb()};
+lb.addEventListener('click',e=>{if(e.target===lb)closeLb()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')document.getElementById('lbPrev').click();if(e.key==='ArrowRight')document.getElementById('lbNext').click()});
+
+/* ===== render from embedded data ===== */
+const NATURAL_SECTIONS = new Set(['aplus','h5','banners','webdesign','illustration','album','photography']);
+const AIRY_SECTIONS = new Set(['aplus','h5','banners','webdesign','illustration','album','photography']);
+const COMPACT_SECTIONS = new Set(['aplus','illustration']);
+const AI_DEFAULT_TAB = 'ai-product';
+// 默认折叠行数
+const COLLAPSE_AFTER_ROWS = 2;
+// 这些 section 只展示 1 行
+const SINGLE_ROW_SECTIONS = new Set(['album','photography']);
+
+function cardHTML(it,i,label,opts){
+  const nat = opts && opts.natural;
+  const wide = opts && opts.wide;
+  const ar = (it.w && it.h) ? `--ar:${it.w}/${it.h};` : '';
+  const cls = ['card','reveal'];
+  if (nat) cls.push('nat');
+  else if (wide) cls.push('wide');
+  return `<div class="${cls.join(' ')}" style="${ar}"><img src="${it.thumb}" loading="lazy" alt="${label} ${i+1}"><div class="corners"><span></span><span></span><span></span><span></span></div><div class="plus">+</div><div class="ov"><div class="idx">${String(i+1).padStart(3,'0')}</div><div class="lbl">${label}</div></div></div>`;
+}
+function bindCardClicks(scope, items){scope.querySelectorAll('.card').forEach((el,i)=>el.onclick=()=>openLb(items,i))}
+
+function makeGallery(items, sectionLabel, cols, opts, slug){
+  const wrap = document.createElement('div');
+  wrap.className = 'gallery-wrap';
+  const grid = document.createElement('div');
+  grid.className = 'grid g-' + cols + (opts.airy ? ' airy' : '') + (opts.compact ? ' compact' : '');
+  if (opts.natural && items.length && items[0].w && items[0].h) {
+    const ar = items[0].w + '/' + items[0].h;
+    grid.style.setProperty('--section-ar', ar);
+  }
+  grid.innerHTML = items.map((it,i)=>{
+    const display = (opts.natural && cols > 1) ? {...it, w: items[0].w, h: items[0].h} : it;
+    return cardHTML(display, i, sectionLabel, opts);
+  }).join('');
+  wrap.appendChild(grid);
+  bindCardClicks(grid, items.map(it=>({...it,_section:sectionLabel})));
+
+  const collapseRows = SINGLE_ROW_SECTIONS.has(slug) ? 1 : COLLAPSE_AFTER_ROWS;
+  const totalRows = Math.ceil(items.length / cols);
+  if (totalRows > collapseRows) {
+    wrap.classList.add('collapsed');
+    const recompute = ()=>{
+      const cards = grid.querySelectorAll('.card');
+      if (cards.length < cols) return;
+      const topRow = cards[0].getBoundingClientRect().top;
+      const targetIdx = Math.min(cards.length-1, collapseRows*cols - 1);
+      const bottom = cards[targetIdx].getBoundingClientRect().bottom;
+      const h = bottom - topRow + 4;
+      if (h > 80) wrap.style.setProperty('--collapsed-h', h+'px');
+    };
+    requestAnimationFrame(recompute);
+    const imgs = grid.querySelectorAll('img');
+    let loaded = 0;
+    const onload = ()=>{ loaded++; if (loaded >= Math.min(imgs.length, collapseRows*cols)) recompute(); };
+    imgs.forEach(img=>{
+      if (img.complete && img.naturalWidth) onload();
+      else img.addEventListener('load', onload, {once:true});
+    });
+    setTimeout(recompute, 1500);
+
+    const btnWrap = document.createElement('div');
+    btnWrap.className = 'show-more-wrap';
+    const btn = document.createElement('button');
+    btn.className = 'show-more';
+    btn.textContent = `查看更多 · View All (${items.length})`;
+    btn.onclick = ()=>{
+      const expanded = wrap.classList.toggle('collapsed') === false;
+      btn.classList.toggle('expanded', expanded);
+      btn.textContent = expanded ? `收起 · Collapse` : `查看更多 · View All (${items.length})`;
+      if (!expanded) wrap.scrollIntoView({behavior:'smooth', block:'start'});
+    };
+    btnWrap.appendChild(btn);
+    wrap.appendChild(btnWrap);
+  }
+  return wrap;
+}
+
+/* ===== Reel (video carousel) ===== */
+const REEL_VIDEOS = [
+  { src: 'videos/osuga.mp4', poster: 'videos/osuga-poster.jpg', tag: 'OSUGA · 大人糖', title: 'AI PRODUCT REEL', year: '2025' },
+  // 以后加视频直接 push 一项进来：
+  // { src: 'videos/xxx.mp4', poster: 'videos/xxx.jpg', tag: 'XXX · 品牌', title: 'AI PRODUCT REEL', year: '2025' },
+];
+function initReel(){
+  const track = document.getElementById('reelTrack');
+  const dots = document.getElementById('reelDots');
+  const prev = document.getElementById('reelPrev');
+  const next = document.getElementById('reelNext');
+  if(!track) return;
+  let cur = 0;
+  // build slides
+  track.innerHTML = REEL_VIDEOS.map((v,i)=>`
+    <div class="reel-slide${i===0?' active':''} muted" data-i="${i}">
+      <video preload="${i===0?'metadata':'none'}" playsinline muted loop poster="${v.poster||''}">
+        <source src="${v.src}" type="video/mp4">
+      </video>
+      <div class="reel-tag">${v.tag}</div>
+      <div class="reel-meta"><span>${v.title}</span><b>/</b><span>${v.year}</span></div>
+      <div class="reel-play"><div class="pcircle"></div><div class="ptxt">PLAY · ${v.tag}</div></div>
+      <div class="reel-controls">
+        <button class="reel-toggle" aria-label="播放/暂停">
+          <span class="ico-play"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>
+          <span class="ico-pause"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg></span>
+        </button>
+        <div class="reel-progress">
+          <div class="reel-progress-bg">
+            <div class="reel-progress-buffer"></div>
+            <div class="reel-progress-fill"></div>
+            <div class="reel-progress-knob"></div>
+          </div>
+        </div>
+        <span class="reel-time">00:00 / 00:00</span>
+        <button class="reel-mute" aria-label="静音切换">
+          <span class="ico-mute"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0014 8v8a4.5 4.5 0 002.5-4z"/></svg></span>
+          <span class="ico-unmute"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12A4.5 4.5 0 0014 8v2.18l2.45 2.45c.03-.2.05-.41.05-.63zM19 12c0 .94-.2 1.82-.54 2.64l1.51 1.51A8.95 8.95 0 0021 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06a8.99 8.99 0 003.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg></span>
+        </button>
+      </div>
+    </div>`).join('');
+  // build dots
+  dots.innerHTML = REEL_VIDEOS.map((_,i)=>`<button class="dot${i===0?' active':''}" data-i="${i}" aria-label="第 ${i+1} 个视频"></button>`).join('');
+
+  const slides = track.querySelectorAll('.reel-slide');
+  const dotEls = dots.querySelectorAll('.dot');
+
+  function go(i){
+    const n = REEL_VIDEOS.length;
+    i = ((i % n) + n) % n;
+    if (i === cur) return;
+    // pause current
+    const oldVid = slides[cur].querySelector('video');
+    if (oldVid) { oldVid.pause(); oldVid.currentTime = 0; }
+    slides[cur].classList.remove('active','playing');
+    dotEls[cur].classList.remove('active');
+    cur = i;
+    slides[cur].classList.add('active');
+    dotEls[cur].classList.add('active');
+    const newVid = slides[cur].querySelector('video');
+    if (newVid) newVid.load();
+  }
+  function fmt(t){
+    if(!isFinite(t)) return '00:00';
+    const m = Math.floor(t/60), s = Math.floor(t%60);
+    return String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  }
+  function togglePlay(slide){
+    slide = slide || slides[cur];
+    const vid = slide.querySelector('video');
+    if(!vid) return;
+    if (vid.paused){
+      if (slide.classList.contains('muted')) { vid.muted = true; }
+      else { vid.muted = false; }
+      vid.play();
+    } else { vid.pause(); }
+  }
+  function toggleMute(slide){
+    const vid = slide.querySelector('video');
+    if (vid.muted) { vid.muted = false; slide.classList.remove('muted'); }
+    else { vid.muted = true; slide.classList.add('muted'); }
+  }
+  prev.onclick = ()=>go(cur-1);
+  next.onclick = ()=>go(cur+1);
+  dotEls.forEach(d=>d.onclick=()=>go(+d.dataset.i));
+  // per-slide controls
+  slides.forEach(s=>{
+    const vid = s.querySelector('video');
+    const playOverlay = s.querySelector('.reel-play');
+    const toggleBtn = s.querySelector('.reel-toggle');
+    const muteBtn = s.querySelector('.reel-mute');
+    const progress = s.querySelector('.reel-progress');
+    const fill = s.querySelector('.reel-progress-fill');
+    const buffer = s.querySelector('.reel-progress-buffer');
+    const knob = s.querySelector('.reel-progress-knob');
+    const timeEl = s.querySelector('.reel-time');
+
+    // first click on overlay → unmute + play
+    playOverlay.onclick = ()=>{ s.classList.remove('muted'); vid.muted = false; togglePlay(s); };
+    toggleBtn.onclick = (e)=>{ e.stopPropagation(); togglePlay(s); };
+    muteBtn.onclick = (e)=>{ e.stopPropagation(); toggleMute(s); };
+
+    // progress click + drag to seek
+    let dragging = false;
+    function seekTo(e){
+      const rect = progress.getBoundingClientRect();
+      const x = ((e.touches?e.touches[0].clientX:e.clientX) - rect.left) / rect.width;
+      const ratio = Math.max(0, Math.min(1, x));
+      if (vid.duration) vid.currentTime = ratio * vid.duration;
+    }
+    progress.addEventListener('mousedown', e=>{ dragging = true; seekTo(e); });
+    addEventListener('mousemove', e=>{ if(dragging) seekTo(e); });
+    addEventListener('mouseup', ()=>{ dragging = false; });
+    progress.addEventListener('touchstart', e=>{ dragging = true; seekTo(e); }, {passive:true});
+    progress.addEventListener('touchmove', e=>{ if(dragging) seekTo(e); }, {passive:true});
+    progress.addEventListener('touchend', ()=>{ dragging = false; });
+
+    // update progress + time + state class
+    vid.addEventListener('timeupdate', ()=>{
+      const p = vid.duration ? (vid.currentTime / vid.duration * 100) : 0;
+      fill.style.width = p + '%';
+      knob.style.left = p + '%';
+      timeEl.textContent = fmt(vid.currentTime) + ' / ' + fmt(vid.duration);
+    });
+    vid.addEventListener('progress', ()=>{
+      if (vid.buffered.length && vid.duration) {
+        const b = vid.buffered.end(vid.buffered.length-1) / vid.duration * 100;
+        buffer.style.width = b + '%';
+      }
+    });
+    vid.addEventListener('play', ()=>{
+      s.classList.add('playing'); s.classList.remove('paused');
+      showControls(s);
+    });
+    vid.addEventListener('pause', ()=>{
+      s.classList.remove('playing'); s.classList.add('paused');
+    });
+    vid.addEventListener('ended', ()=>{ s.classList.remove('playing'); });
+    vid.addEventListener('volumechange', ()=>{
+      if (vid.muted) s.classList.add('muted'); else s.classList.remove('muted');
+    });
+    // mouse activity → show controls
+    s.addEventListener('mousemove', ()=>showControls(s));
+    s.addEventListener('touchstart', ()=>showControls(s), {passive:true});
+  });
+  let hideTimer;
+  function showControls(slide){
+    slide.classList.add('show-controls');
+    clearTimeout(hideTimer);
+    hideTimer = setTimeout(()=>{
+      const vid = slide.querySelector('video');
+      if (vid && !vid.paused) slide.classList.remove('show-controls');
+    }, 2500);
+  }
+  // keyboard
+  addEventListener('keydown', e=>{
+    if(!document.getElementById('reel').getBoundingClientRect().top < innerHeight) return;
+    if(e.key==='ArrowLeft') go(cur-1);
+    if(e.key==='ArrowRight') go(cur+1);
+  });
+}
+
+function init(){
+  const data = window.__data;
+  if(!data){document.getElementById('introTxt').textContent='⚠ 数据未注入';return}
+
+  document.getElementById('introTxt').textContent = data.profile.intro_cn;
+  document.getElementById('avatarImg').src = data.profile.avatar;
+  initReel();
+
+  const cl=document.getElementById('contactLinks');
+  const rows=[
+    {k:'EMAIL',v:data.profile.email,href:'mailto:'+data.profile.email},
+    {k:'WECHAT / PHONE',v:data.profile.wechat,href:'tel:'+data.profile.phone},
+    {k:'QQ',v:data.profile.qq,href:'#'},
+    {k:'GITHUB',v:'github.com/jazz-hue/Portfolio',href:'https://github.com/jazz-hue/Portfolio'},
+    {k:'LOCATION',v:data.profile.location_cn+' · '+data.profile.location_en,href:'#'},
+  ];
+  cl.innerHTML=rows.map(r=>`<a href="${r.href}" target="_blank" rel="noopener"><div class="row"><div class="k">${r.k}</div><div class="v">${r.v}</div></div></a>`).join('');
+
+  const work=document.getElementById('work');
+  data.sections.forEach((sec, idx) => {
+    const num = String(idx+3).padStart(2,'0');
+    const wrap = document.createElement('section');
+    wrap.className = 'section';
+    wrap.id = sec.slug;
+    let head = `<div class="shead"><div class="ttl reveal"><span class="en">${sec.title_en}</span>${sec.title_cn}</div><div class="nbox reveal r-1"><b>${num}</b>${sec.title_en.toUpperCase()}</div></div>`;
+    wrap.innerHTML = head;
+
+    const cols = sec.cols || 3;
+    const natural = NATURAL_SECTIONS.has(sec.slug);
+    const airy = AIRY_SECTIONS.has(sec.slug);
+    const compact = COMPACT_SECTIONS.has(sec.slug);
+    const wide = !natural && sec.slug==='banners';
+    const opts = { natural, airy, wide, compact };
+
+    if (sec.kind==='ai' || sec.kind==='photo') {
+      const tabs=document.createElement('div'); tabs.className='tabs reveal';
+      let curGallery = null;
+      const mount = document.createElement('div');
+      const renderTab = (g)=>{
+        const label = sec.title_cn + ' / ' + g.title_cn;
+        const gal = makeGallery(g.items, label, cols, opts, sec.slug);
+        if (curGallery) mount.replaceChild(gal, curGallery);
+        else mount.appendChild(gal);
+        curGallery = gal;
+        bindReveal(gal);
+      };
+      sec.groups.forEach((g,i)=>{
+        const b=document.createElement('button');
+        const countTxt = g.items.length ? ` · ${g.items.length}` : ` · 即将上线`;
+        b.innerHTML = `${g.title_cn}<span class="en">${g.title_en}${countTxt}</span>`;
+        if (g.items.length === 0) { b.style.opacity = '.5'; b.style.cursor='not-allowed'; }
+        b.onclick=()=>{
+          if (g.items.length === 0) return;
+          tabs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+          b.classList.add('active');
+          renderTab(g);
+        };
+        tabs.appendChild(b);
+      });
+      wrap.appendChild(tabs);
+      wrap.appendChild(mount);
+      work.appendChild(wrap);
+      let first = null;
+      if (sec.slug==='ai') first = sec.groups.find(g=>g.slug===AI_DEFAULT_TAB && g.items.length>0);
+      if (!first) first = sec.groups.find(g=>g.items.length>0) || sec.groups[0];
+      renderTab(first);
+      tabs.querySelectorAll('button').forEach(x=>x.classList.remove('active'));
+      const firstIdx = sec.groups.indexOf(first);
+      tabs.querySelectorAll('button')[firstIdx]?.classList.add('active');
+    } else {
+      const gal = makeGallery(sec.items, sec.title_cn, cols, opts, sec.slug);
+      wrap.appendChild(gal);
+      work.appendChild(wrap);
+      bindReveal(gal);
+    }
+    bindReveal(wrap);
+  });
+  bindReveal(document.getElementById('contact'));
+}
+init();
+</script>
+</body>
+</html>
