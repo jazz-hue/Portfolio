@@ -5,16 +5,19 @@
 <title>王玮 Wang Wei · Portfolio 2025</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="description" content="王玮 Wang Wei — 视觉传达设计师 / AI 创作 · Portfolio 2025">
+<link rel="preload" href="images/about/logo.svg" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@500;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+SC:wght@400;700;900&family=Noto+Serif+SC:wght@700;900&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+SC:wght@400;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Noto+Sans+SC:wght@400;700;900&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --bg:#0a0a0a; --bg2:#141414; --fg:#fff; --mute:#7d7d83;
   --line:rgba(255,255,255,.10); --line2:rgba(255,255,255,.22);
   --red:#E5132A;        /* 主点缀红 */
   --red-d:#A30E1F;
-  --font-en:'Space Grotesk','Inter',system-ui,sans-serif;
+  --font-en:'Space Grotesk',system-ui,sans-serif;
   --font-cn:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
   --font-cn-s:'Noto Serif SC','PingFang SC',serif;
   --pad: clamp(20px, 4vw, 64px);
@@ -130,7 +133,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 @keyframes logoIn{to{opacity:.75;transform:scale(1) rotate(0)}}
 .hero-logo:hover .logo-img{opacity:1;transform:scale(1.05);filter:drop-shadow(0 0 40px rgba(229,19,42,.9)) brightness(.95) invert(18%) sepia(96%) saturate(7434%) hue-rotate(354deg)}
 /* full-hero frosted glass overlay (uses uploaded texture) */
-.hero::after{content:"";position:absolute;inset:0;background:url(images/about/毛玻璃.png) center/cover no-repeat;mix-blend-mode:screen;opacity:.08;pointer-events:none;z-index:1;animation:glassDrift 18s ease-in-out infinite}
+.hero::after{content:"";position:absolute;inset:0;background:url(images/about/毛玻璃.webp) center/cover no-repeat;mix-blend-mode:screen;opacity:.08;pointer-events:none;z-index:1;animation:glassDrift 18s ease-in-out infinite}
 @keyframes glassDrift{0%,100%{transform:scale(1) translate(0,0)}50%{transform:scale(1.04) translate(-1%,-1%)}}
 .hero-inner,.hero .corner,.scroll-cta{z-index:3}
 .hero-logo .logo-ring{position:absolute;inset:0;border:1px solid rgba(229,19,42,.4);border-radius:50%;animation:spin 28s linear infinite;pointer-events:none}
@@ -476,7 +479,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .show-more:hover::before{background:#fff}
 .show-more.expanded::before{background:#fff;box-shadow:inset 0 0 0 2px var(--red)}
 
-.card{position:relative;overflow:hidden;background:var(--bg2);aspect-ratio:4/5;cursor:pointer}
+.card{position:relative;overflow:hidden;background:var(--bg2);aspect-ratio:4/5;cursor:pointer;contain:content}
 .card.wide{aspect-ratio:16/9}
 /* natural: image dictates card size, cards align to TOP of row */
 .card.nat{aspect-ratio:auto;background:#0f0f10;border:1px solid rgba(255,255,255,.04);padding:6px;align-self:start}
@@ -678,7 +681,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <span class="frame-tr"></span>
     <span class="frame-bl"></span>
     <span class="frame-br"></span>
-    <img id="avatarImg" alt="王玮 Wang Wei" loading="lazy">
+    <img id="avatarImg" alt="王玮 Wang Wei" loading="lazy" decoding="async">
     <div class="label-bottom">WANG WEI · 2025</div>
   </div>
 </section>
@@ -809,7 +812,7 @@ function cardHTML(it,i,label,opts){
   const cls = ['card','reveal'];
   if (nat) cls.push('nat');
   else if (wide) cls.push('wide');
-  return `<div class="${cls.join(' ')}" style="${ar}"><img src="${it.thumb}" loading="lazy" alt="${label} ${i+1}"><div class="corners"><span></span><span></span><span></span><span></span></div><div class="plus">+</div><div class="ov"><div class="idx">${String(i+1).padStart(3,'0')}</div><div class="lbl">${label}</div></div></div>`;
+  return `<div class="${cls.join(' ')}" style="${ar}"><img src="${it.thumb}" loading="lazy" decoding="async" alt="${label} ${i+1}"><div class="corners"><span></span><span></span><span></span><span></span></div><div class="plus">+</div><div class="ov"><div class="idx">${String(i+1).padStart(3,'0')}</div><div class="lbl">${label}</div></div></div>`;
 }
 function bindCardClicks(scope, items){scope.querySelectorAll('.card').forEach((el,i)=>el.onclick=()=>openLb(items,i))}
 
@@ -872,8 +875,7 @@ function makeGallery(items, sectionLabel, cols, opts, slug){
 /* ===== Reel (video carousel) ===== */
 const REEL_VIDEOS = [
   { src: 'videos/osuga.mp4', poster: 'videos/osuga-poster.jpg', tag: 'OSUGA · 大人糖', title: 'AI PRODUCT REEL', year: '2025' },
-  // 以后加视频直接 push 一项进来：
-  // { src: 'videos/xxx.mp4', poster: 'videos/xxx.jpg', tag: 'XXX · 品牌', title: 'AI PRODUCT REEL', year: '2025' },
+  { src: 'videos/motorcycle.mp4', poster: 'videos/motorcycle-poster.jpg', tag: 'MOTORCYCLE · 摩托车', title: 'AI VIDEO REEL', year: '2025' },
 ];
 function initReel(){
   const track = document.getElementById('reelTrack');
@@ -885,7 +887,7 @@ function initReel(){
   // build slides
   track.innerHTML = REEL_VIDEOS.map((v,i)=>`
     <div class="reel-slide${i===0?' active':''} muted" data-i="${i}">
-      <video preload="${i===0?'metadata':'none'}" playsinline muted loop poster="${v.poster||''}">
+      <video preload="none" playsinline muted loop poster="${v.poster||''}">
         <source src="${v.src}" type="video/mp4">
       </video>
       <div class="reel-tag">${v.tag}</div>
