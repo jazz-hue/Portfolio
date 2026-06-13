@@ -887,7 +887,7 @@ function initReel(){
   // build slides
   track.innerHTML = REEL_VIDEOS.map((v,i)=>`
     <div class="reel-slide${i===0?' active':''} muted" data-i="${i}">
-      <video preload="none" playsinline muted loop poster="${v.poster||''}">
+      <video preload="${i===0?'metadata':'none'}" playsinline muted loop poster="${v.poster||''}">
         <source src="${v.src}" type="video/mp4">
       </video>
       <div class="reel-tag">${v.tag}</div>
@@ -1031,6 +1031,20 @@ function initReel(){
     if(e.key==='ArrowLeft') go(cur-1);
     if(e.key==='ArrowRight') go(cur+1);
   });
+  // preload videos when reel section approaches viewport
+  const reelSec = document.getElementById('reel');
+  if (reelSec && 'IntersectionObserver' in window) {
+    const preObs = new IntersectionObserver((entries)=>{
+      if (entries[0].isIntersecting) {
+        slides.forEach(s=>{
+          const vid = s.querySelector('video');
+          if (vid && vid.preload === 'none') vid.preload = 'metadata';
+        });
+        preObs.disconnect();
+      }
+    }, { rootMargin: '200px' });
+    preObs.observe(reelSec);
+  }
 }
 
 function init(){
