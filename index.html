@@ -274,6 +274,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .reel-slide{position:absolute;inset:0;opacity:0;transition:opacity .6s cubic-bezier(.2,.7,.2,1);pointer-events:none}
 .reel-slide.active{opacity:1;pointer-events:auto;z-index:2}
 .reel-slide video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
+.reel-slide.contain video{object-fit:contain}
 .reel-slide .reel-meta{position:absolute;left:18px;bottom:14px;display:flex;align-items:center;gap:14px;font-family:var(--font-en);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#fff;z-index:3;mix-blend-mode:difference;pointer-events:none}
 .reel-slide .reel-meta b{color:var(--red);font-weight:700;letter-spacing:.22em}
 .reel-slide .reel-tag{position:absolute;top:18px;left:18px;font-family:var(--font-en);font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:var(--red);color:#fff;padding:7px 13px;display:flex;gap:8px;align-items:center;z-index:3}
@@ -877,6 +878,7 @@ const REEL_VIDEOS = [
   { src: 'videos/zhenai-avatar.mp4', poster: 'videos/zhenai-avatar-poster.jpg', tag: '珍爱网 · 虚拟角色', title: 'AI CHARACTER REEL', year: '2026' },
   { src: 'videos/chase.mp4', poster: 'videos/chase-poster.jpg', tag: '追逐 · AI 动态短片', title: 'AI CHASE REEL', year: '2026' },
   { src: 'videos/traverse.mp4', poster: 'videos/traverse-poster.jpg', tag: '穿越 · AI 动态短片', title: 'AI TRAVERSE REEL', year: '2026' },
+  { src: 'videos/zhenai-qixi.mp4', poster: 'videos/zhenai-qixi-poster.jpg', tag: '珍爱网 · 七夕', title: 'AI QIXI REEL', year: '2026', fit: 'contain' },
   { src: 'videos/osuga.mp4', poster: 'videos/osuga-poster.jpg', tag: 'OSUGA · 大人糖', title: 'AI PRODUCT REEL', year: '2025' },
   { src: 'videos/motorcycle.mp4', poster: 'videos/motorcycle-poster.jpg', tag: 'MOTORCYCLE · 摩托车', title: 'AI VIDEO REEL', year: '2025' },
 ];
@@ -889,7 +891,7 @@ function initReel(){
   let cur = 0;
   // build slides
   track.innerHTML = REEL_VIDEOS.map((v,i)=>`
-    <div class="reel-slide${i===0?' active':''} muted" data-i="${i}">
+    <div class="reel-slide${i===0?' active':''}${v.fit==='contain'?' contain':''} muted" data-i="${i}">
       <video preload="${i===0?'metadata':'none'}" playsinline muted loop poster="${v.poster||''}">
         <source src="${v.src}" type="video/mp4">
       </video>
