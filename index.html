@@ -2,9 +2,9 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<title>王玮 Wang Wei · Portfolio 2025</title>
+<title>王玮 Wang Wei · Portfolio 2026</title>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="王玮 Wang Wei — 视觉传达设计师 / AI 创作 · Portfolio 2025">
+<meta name="description" content="王玮 Wang Wei — 视觉传达设计师 / AI 创作 · Portfolio 2026">
 <link rel="preload" href="images/about/logo.svg" as="image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -65,6 +65,48 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 /* ===== HERO (geometric) ===== */
 .hero{position:relative;min-height:100svh;overflow:hidden;padding:var(--pad);padding-top:120px;display:flex;align-items:flex-end}
 .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+/* ===== HERO COVER 2026 ===== */
+.hero--cover{isolation:isolate;background:#06141c}
+.hero--cover .hero-bg{background:
+  linear-gradient(90deg,rgba(3,14,22,.06) 0%,rgba(3,14,22,.02) 36%,rgba(3,14,22,.42) 59%,rgba(2,10,16,.92) 100%),
+  linear-gradient(0deg,rgba(2,10,16,.58) 0%,transparent 42%),
+  url(images/about/cover-2026.webp) 50% center/cover no-repeat}
+.hero--cover::after{background:none;opacity:0;animation:none}
+.hero--cover .hero-grid{background-image:linear-gradient(rgba(223,190,139,.13) 1px,transparent 1px),linear-gradient(90deg,rgba(223,190,139,.13) 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.25) 38%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.25) 38%,#000 100%);opacity:.42}
+.hero--cover .hero-glow{left:auto;right:7%;top:22%;width:500px;height:500px;background:radial-gradient(circle,rgba(225,170,96,.18),transparent 67%);filter:blur(48px)}
+.hero--cover .hero-ring,.hero--cover .hero-ring2,.hero--cover .hero-bar,.hero--cover .hero-bar2,.hero--cover .hero-shape{display:none}
+.hero--cover .hero-scanline{background:linear-gradient(90deg,transparent,rgba(225,170,96,.55) 28%,rgba(225,170,96,.55) 72%,transparent);opacity:.32}
+.hero--cover .hero-inner{display:flex;justify-content:flex-end;align-items:center;position:relative;z-index:3}
+.hero--cover .hero-left{width:min(42vw,620px);margin-left:auto;padding:clamp(24px,3.2vw,52px);border:1px solid rgba(231,196,145,.34);border-left:2px solid #e1aa60;background:linear-gradient(135deg,rgba(2,14,22,.84),rgba(4,18,28,.42));box-shadow:0 24px 80px rgba(0,0,0,.32);backdrop-filter:blur(12px)}
+.hero--cover .hero-logo{display:none}
+.cover-brand{display:flex;align-items:center;gap:14px;margin-bottom:clamp(26px,4vw,56px);font-family:var(--font-en);font-size:10px;letter-spacing:.34em;color:rgba(248,239,223,.68);text-transform:uppercase}
+.cover-brand img{width:54px;height:54px;object-fit:contain;filter:drop-shadow(0 3px 14px rgba(0,0,0,.45))}
+.cover-brand::after{content:"";height:1px;flex:1;max-width:128px;background:linear-gradient(90deg,rgba(225,170,96,.9),transparent)}
+.hero--cover .eyebrow{color:rgba(243,226,194,.72);margin-bottom:20px}
+.hero--cover .eyebrow span::before{background:#e1aa60;box-shadow:0 0 12px rgba(225,170,96,.75)}
+.hero--cover h1{font-size:clamp(64px,7.5vw,134px);line-height:.82;color:#f7f1e6;text-shadow:0 10px 32px rgba(0,0,0,.26)}
+.hero--cover h1 .slash,.hero--cover h1 .alias{color:#e1aa60}
+.hero--cover h1 .alias{font-size:clamp(24px,3.5vw,56px);text-shadow:none}
+.hero--cover h1 .alias::before,.hero--cover h1 .alias::after{display:none}
+.hero--cover h1 .en{color:rgba(244,236,221,.76);font-size:clamp(16px,1.65vw,26px);line-height:1.25;margin-top:22px;letter-spacing:.04em}
+.hero--cover .corner{color:rgba(244,236,221,.58)}
+.hero--cover .corner.tl::after,.hero--cover .corner.tr::after{background:#e1aa60}
+.hero--cover .scroll-cta{border-color:rgba(225,170,96,.42);background:rgba(2,14,22,.58);color:#f7f1e6}
+.hero--cover .scroll-cta::before{background:#b97837}
+.hero--cover .scroll-cta .sc-dot{background:#e1aa60}
+@media (max-width:899px){
+  .hero--cover{padding-top:100px;padding-bottom:118px}
+  .hero--cover .hero-bg{background-position:28% center}
+  .hero--cover .hero-grid{background-size:52px 52px;mask-image:linear-gradient(0deg,#000 0%,transparent 65%);-webkit-mask-image:linear-gradient(0deg,#000 0%,transparent 65%)}
+  .hero--cover .hero-inner{align-items:flex-end}
+  .hero--cover .hero-left{width:100%;max-width:600px;padding:26px 22px 24px;background:linear-gradient(135deg,rgba(2,14,22,.84),rgba(4,18,28,.64))}
+  .hero--cover h1{font-size:clamp(58px,17vw,92px)}
+  .hero--cover h1 .alias{font-size:clamp(22px,8vw,42px)}
+  .hero--cover h1 .en{font-size:15px;margin-top:18px}
+  .cover-brand{margin-bottom:30px;font-size:9px;letter-spacing:.24em}
+  .cover-brand img{width:44px;height:44px}
+  .hero--cover .corner.tr{display:none}
+}
 /* faint grid */
 .hero-grid{position:absolute;inset:0;background-image:
   linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
@@ -554,7 +596,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
   <div class="lwrap">
     <div>
       <div class="lname">王 玮 · WANG <b>WEI</b></div>
-      <div class="lname" style="opacity:.5;margin-top:8px">PORTFOLIO 2025 / LOADING</div>
+      <div class="lname" style="opacity:.5;margin-top:8px">PORTFOLIO 2026 / LOADING</div>
     </div>
     <div class="lpct" id="lpct">00<span>%</span></div>
   </div>
@@ -583,7 +625,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 </div>
 
 <!-- ============ HERO ============ -->
-<section class="hero">
+<section class="hero hero--cover">
   <div class="hero-bg">
     <div class="hero-grid"></div>
     <div class="hero-glow"></div>
@@ -604,12 +646,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
     <div class="hero-shape hs-10"></div>
     <div class="hero-shape hs-11"></div>
   </div>
-  <div class="corner tl">© 2025 · Shenzhen<br>jazz-hue / Portfolio</div>
+  <div class="corner tl">© 2026 · Shenzhen<br>jazz-hue / Portfolio</div>
   <div class="corner tr" id="liveClock">Loading time…</div>
   <div class="hero-inner">
     <div class="hero-left">
+    <div class="cover-brand"><img src="images/about/logo.svg" alt="JK logo"><span>Jazzkai / Visual Portfolio</span></div>
     <div class="eyebrow">
-      <span>Portfolio 2025</span>
+      <span>Portfolio 2026</span>
       <span>Visual Communication</span>
       <span id="availTag">Available for hire</span>
     </div>
