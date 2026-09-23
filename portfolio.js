@@ -6,7 +6,9 @@ function initWorkExplorer(sections) {
     banners: 'videos/covers/banners.mp4',
     album: 'videos/covers/album.mp4',
     illustration: 'videos/covers/illustration.mp4',
-    ai: 'videos/covers/ai.mp4'
+    ai: 'videos/covers/ai.mp4',
+    photography: 'videos/covers/photography.mp4',
+    products: 'videos/covers/products.mp4'
   };
   // A curated view of existing work, not another duplicate page section.
   const picks = [
